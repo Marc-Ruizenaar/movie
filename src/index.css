@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --mainRed: #E50000;
+  --Background: #141414;
+  --ButtonBackground: #1A1A1A;
+}
+
+body {
+  font-family: "Manrope", serif;
+}
+
+.container {
+  max-width: 1594px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
