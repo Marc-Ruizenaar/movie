@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import Movies from './pages/movies';
 import { APIProvider } from './api/TMDB/fetchAPIMovies';
+import SingleMoviePage from './componants/MoviesPageComponants/SingleMoviesPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Routes>
           <Route path='/' element={<App />} />
           <Route path='/movies' element={<Movies />} />
+          <Route path='/movies/:slug' element={<SingleMoviePage />} />
         </Routes>
 
       </BrowserRouter>
