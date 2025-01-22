@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
+import { fetchTrailer } from './fetchTrailer';
 
 const APIMoviesContext = createContext();
 
@@ -21,7 +22,13 @@ export const APIProvider = ({ children }) => {
             setLoading(true);
             const response = await fetch(url, options);
             const data = await response.json();
-            setMovies(data.results);
+            const moviesWithTrailers = await Promise.all(
+                data.results.map(async (movie) => {
+                    const trailerKey = await fetchTrailer(movie.id);
+                    return { ...movie, trailer: trailerKey };
+                })
+            );
+            setMovies(moviesWithTrailers);
             setError(null);
         } catch (err) {
             setError(err.message);
@@ -35,7 +42,7 @@ export const APIProvider = ({ children }) => {
     }, []);
 
     return (
-        <APIMoviesContext.Provider value={{ movies, loading, error, fetchMovies }}>
+        <APIMoviesContext.Provider value={{ movies, loading, error }}>
             {children}
         </APIMoviesContext.Provider>
     );
