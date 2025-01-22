@@ -1,4 +1,4 @@
-import { useAPI } from "../api/TMDB/fetchAPI";
+import { useAPI } from "../api/TMDB/fetchAPIMovies";
 import MoviesGenres from "../componants/MoviesGenres";
 import MoviesJumboHeader from "../componants/MoviesJumboHeader";
 

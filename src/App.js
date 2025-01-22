@@ -1,4 +1,4 @@
-import { useAPI } from './api/TMDB/fetchAPI';
+import { useAPI } from './api/TMDB/fetchAPIMovies';
 import MovieList from './componants/MovieList';
 
 export default function App() {

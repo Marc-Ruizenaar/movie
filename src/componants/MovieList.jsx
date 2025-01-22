@@ -1,5 +1,5 @@
 import React from "react";
-import { useAPI } from "../api/TMDB/fetchAPI";
+import { useAPI } from "../api/TMDB/fetchAPIMovies";
 
 export default function MovieList() {
   const { movies, loading, error } = useAPI();
