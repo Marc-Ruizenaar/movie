@@ -12,6 +12,7 @@ export default function Movies() {
       <MoviesJumboHeader />
 
       <MoviesGenres />
+      
     </div>
   );
 }
