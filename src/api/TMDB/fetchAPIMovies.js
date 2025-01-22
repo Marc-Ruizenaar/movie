@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 
-const APIContext = createContext();
+const APIMoviesContext = createContext();
 
 export const APIProvider = ({ children }) => {
     const [movies, setMovies] = useState([]);
@@ -35,14 +35,14 @@ export const APIProvider = ({ children }) => {
     }, []);
 
     return (
-        <APIContext.Provider value={{ movies, loading, error, fetchMovies }}>
+        <APIMoviesContext.Provider value={{ movies, loading, error, fetchMovies }}>
             {children}
-        </APIContext.Provider>
+        </APIMoviesContext.Provider>
     );
 };
 
 export const useAPI = () => {
-    const context = useContext(APIContext);
+    const context = useContext(APIMoviesContext);
     if (context === undefined) {
         throw new Error('UseAPI must be used within an APIProvider');
     }
