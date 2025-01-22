@@ -1,18 +1,17 @@
 import { useAPI } from "../api/TMDB/fetchAPI";
+import MoviesGenres from "../componants/MoviesGenres";
+import MoviesJumboHeader from "../componants/MoviesJumboHeader";
 
 export default function Movies() {
   const { movies, loading, error } = useAPI();
 
-  return (
-    <div>
-      <h1>Movies</h1>
+  console.log(movies);
 
-      {movies.map((movie) => (
-        <div key={movie.id}>
-          <h2>{movie.title}</h2>
-          <p>{movie.overview}</p>
-        </div>
-      ))}
+  return (
+    <div className="container">
+      <MoviesJumboHeader />
+
+      <MoviesGenres />
     </div>
   );
 }

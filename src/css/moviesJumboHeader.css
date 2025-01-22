@@ -1,0 +1,28 @@
+
+.moviesjumboheader {
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    height: 550px;
+    color: white;
+    text-align: center;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  
+    p {
+      margin: 20px 0;
+      color: var(--PText);
+      line-height: 1.8rem;
+    }
+  
+    img {
+      z-index: -9;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+  }
