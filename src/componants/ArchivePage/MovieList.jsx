@@ -3,7 +3,7 @@ import { useAPI } from "../../api/TMDB/fetchAPIMovies";
 import { useNavigate } from "react-router-dom";
 import { HiCalendarDateRange } from "react-icons/hi2";
 import StarSmaller from "./StarSmaller";
-import "../css/StarSmaller.css";
+import "../../css/StarSmaller.css";
 
 export default function MovieList() {
   const { movies, loading, error } = useAPI();
