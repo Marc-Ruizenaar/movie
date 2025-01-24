@@ -43,7 +43,7 @@ export default function MovieOther({  rating, releaseDate, popularity, voteCount
                 <RiStarSLine size={24} />
                 <h2>Rating</h2>
             </div>
-            <StarRating rating={rating} />
+            <StarRating title={"IMDb"} rating={rating} />
         </div>
 
         <div className="movieOther">

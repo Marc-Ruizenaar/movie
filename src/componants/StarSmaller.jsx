@@ -1,13 +1,13 @@
 import React from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-export default function StarRating({ rating, title }) {
+export default function StarSmaller({ rating, title }) {
   const fullStars = Math.floor(rating / 2);
   const halfStar = rating % 2 >= 1 ? 1 : 0;
   const emptyStars = 5 - fullStars - halfStar;
 
   return (
-    <div className="star-rating-container">
+    <div className="starsSmaller-rating-container">
       {title ? <h3>{title}</h3> : ""}
 
       <div className="star-rating">
