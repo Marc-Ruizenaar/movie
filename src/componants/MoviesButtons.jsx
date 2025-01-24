@@ -2,10 +2,10 @@ import { FaPlay } from "react-icons/fa";
 import { FaRegThumbsUp } from "react-icons/fa";
 import "../css/movieButtons.css";
 
-export default function MoviesButtons() {
+export default function MoviesButtons({ onPlayButtonClick }) {
   return (
     <div className="MoviesButtons">
-      <button className="playButton">
+      <button className="playButton" onClick={onPlayButtonClick}>
         <FaPlay />
         Play now
       </button>

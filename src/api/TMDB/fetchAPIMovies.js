@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
-import { fetchTrailer } from './fetchTrailer';
+import { fetchTrailer, fetchCast } from './fetchTrailer';
 
 const APIMoviesContext = createContext();
 
@@ -25,7 +25,8 @@ export const APIProvider = ({ children }) => {
             const moviesWithTrailers = await Promise.all(
                 data.results.map(async (movie) => {
                     const trailerKey = await fetchTrailer(movie.id);
-                    return { ...movie, trailer: trailerKey };
+                    const cast = await fetchCast(movie.id);
+                    return { ...movie, trailer: trailerKey, cast };
                 })
             );
             setMovies(moviesWithTrailers);
