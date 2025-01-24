@@ -1,5 +1,5 @@
 import { useAPI } from './api/TMDB/fetchAPIMovies';
-import MovieList from './componants/MovieList';
+import MovieList from './componants/ArchivePage/MovieList';
 
 export default function App() {
   const { movies, loading, error } = useAPI();

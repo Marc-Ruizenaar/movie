@@ -164,3 +164,56 @@
     font-weight: bold;
   }
 }
+
+.movieReviews-container {
+  padding: 30px;
+  background-color: var(--ButtonBackground);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+  width: 60%;
+  height: auto;
+
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--PText);
+  }
+
+  .movieReviews {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto; 
+  }
+
+  .review {
+    background-color: var(--Background);
+    padding: 20px;
+    width: 300px; 
+    border-radius: 8px;
+    flex-shrink: 0; 
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--PText);
+  }
+
+  p {
+    font-size: 14px; 
+    color: #FFFFFF;
+    max-height: 100px; 
+    overflow-y: auto;
+  }
+  .reviews-error{
+    color: var(--mainRed);
+    font-size: 1.2rem;
+    background-color: var(--Background);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--PText);
+  }
+}
