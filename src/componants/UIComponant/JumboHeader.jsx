@@ -1,5 +1,5 @@
-import MoviesButtons from "./MoviesButtons";
-import "../css/moviesJumboHeader.css"
+import MoviesButtons from "../ArchivePage/MoviesButtons";
+import "../../css/JumboHeader.css";
 
 
 export default function MoviesJumboHeader( { image, title, description, onPlayButtonClick } ) {

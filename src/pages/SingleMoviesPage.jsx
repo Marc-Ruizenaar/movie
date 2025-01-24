@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import MoviesJumboHeader from "../componants/MoviesJumboHeader";
+import JumboHeader from "../componants/UIComponant/JumboHeader";
 import MovieOverview from "../componants/SinglePage/MovieOverview";
 import MovieCast from "../componants/SinglePage/MovieCast";
 import MovieTrailer from "../componants/SinglePage/MovieTrailer";
@@ -28,7 +28,7 @@ export default function SingleMoviePage() {
 
   return (
     <div className="container">
-      <MoviesJumboHeader 
+      <JumboHeader 
         image={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} 
         title={movie.title} 
         description={movie.overview} 

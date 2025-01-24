@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from "react-router";
 import './index.css';
 import App from './App';
-import Movies from './pages/movies';
+import Movies from './pages/SingleMoviesPage';
 import { APIProvider } from './api/TMDB/fetchAPIMovies';
 import SingleMoviePage from './pages/SingleMoviesPage';
 

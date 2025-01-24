@@ -1,6 +1,6 @@
 import { FaPlay } from "react-icons/fa";
 import { FaRegThumbsUp } from "react-icons/fa";
-import "../css/movieButtons.css";
+import "../../css/movieButtons.css";
 
 export default function MoviesButtons({ onPlayButtonClick }) {
   return (
