@@ -16,9 +16,20 @@ export const fetchCast = async (movieId) => {
   try {
     const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`);
     const data = await response.json();
-    return data.cast ? data.cast.slice(0, 10) : []; // Return top 5 cast members
+    return data.cast ? data.cast.slice(0, 10) : []; 
   } catch (error) {
     console.error('Error fetching cast:', error);
+    return [];
+  }
+};
+
+export const fetchReviews = async (movieId) => {
+  try {
+    const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${API_KEY}`);
+    const data = await response.json();
+    return data.results ? data.results.slice(0, 2) : []; 
+  } catch (error) {
+    console.error('Error fetching reviews:', error);
     return [];
   }
 };

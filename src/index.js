@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import Movies from './pages/movies';
 import { APIProvider } from './api/TMDB/fetchAPIMovies';
-import SingleMoviePage from './componants/MoviesPageComponants/SingleMoviesPage';
+import SingleMoviePage from './pages/SingleMoviesPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
