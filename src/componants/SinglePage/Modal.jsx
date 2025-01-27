@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css/modal.css";
+import { IoMdClose } from "react-icons/io";
 
 export default function Modal({ show, onClose, children }) {
   if (!show) {
@@ -10,7 +11,7 @@ export default function Modal({ show, onClose, children }) {
     <div className="modal-overlay">
       <div className="modal-content">
         <button className="modal-close" onClick={onClose}>
-          &times;
+          <IoMdClose size={30} />
         </button>
         {children}
       </div>
