@@ -1,16 +1,44 @@
 import React from "react";
 import "../../css/singleMoviePage.css";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { useState } from "react";
+
+
+
 
 export default function MovieCast({ cast }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const visibleCastCount = 5; // Number of cast members to show at a time
+
   if (!cast || cast.length === 0) {
     return <p>No cast information available.</p>;
   }
 
+  const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+  };
+
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) =>
+      Math.min(prevIndex + 1, cast.length - visibleCastCount)
+    );
+  };
+
+  const visibleCast = cast.slice(currentIndex, currentIndex + visibleCastCount);
+
   return (
     <div className="movieCast">
-      <h2>Cast</h2>
+     <div className="cast-header">
+        <h2>Cast</h2>
+        <div className="cast-navigation">
+          <FaArrowLeft onClick={handlePrevClick} className="arrow" />
+          <FaArrowRight onClick={handleNextClick} className="arrow" />
+        </div>
+      </div>
+      
+
       <ul>
-        {cast.map((actor) => (
+        {visibleCast.map((actor) => (
           <li key={actor.id}>
             <img 
               src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`} 
