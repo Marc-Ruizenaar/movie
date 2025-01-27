@@ -1,0 +1,52 @@
+.devicesContainer {
+  margin-top: 3rem;
+  color: white;
+  .devicesHead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 0.125rem;
+    margin-bottom: 2rem;
+  }
+  .cardContainer {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 3rem;
+    .deviceCard {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 1.5rem;
+      width: 27rem;
+      height: 10.938rem;
+      border: solid 0.1px rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scaleY(1.1)
+      }
+      .cardTitle {
+        display: flex;
+        gap: 10px;
+        height: 2.75rem;
+        place-items: center;
+        .imgBox {
+          width: 2.75rem;
+          height: 2.75rem;
+          border-radius: 5px;
+          border: solid 0.1px rgba(255, 255, 255, 0.2);
+          background-color: rgba(255, 255, 255, 0.05);
+          display: flex;
+          place-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
