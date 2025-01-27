@@ -4,18 +4,21 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: auto;
-  margin: 40px 0;
-  width: 60%;
+  /* margin: 40px 0; */
+  margin-top: 40px;
+  width: 90%;
 
   h2 {
-    font-size: 18px;
+    font-size: 1.25rem;
     margin-bottom: 10px;
     color: var(--PText);
+    letter-spacing: 0.05rem;
   }
 
   p {
     font-size: 16px;
     color: #FFFFFF;
+    letter-spacing: 0.03rem;
   }
 
 }
@@ -26,15 +29,38 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: auto;
-  margin: 40px 0;
-  width: 60%;
+  /* margin: 40px 0; */
+  width: 90%;
 
   h2 {
-    font-size: 18px;
+    font-size: 1.25rem;
     margin-bottom: 20px;
+    letter-spacing: 0.05rem;
     color: var(--PText);
   }
+  .cast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  
+    .cast-navigation {
+      display: flex;
+      justify-content: end;
+      margin-bottom: 20px;
+    }
 
+    .arrow {
+      cursor: pointer;
+      background-color: var(--Background);
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 24px;
+      color: var(--PText);
+      border: 1px solid var(--PText);
+      margin: 10px;
+    }
+  }
   ul {
     display: flex;
     /* flex-wrap: wrap; */
@@ -71,8 +97,9 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: auto;
-  margin: 40px 0;
-  width: 40%;
+  /* margin: 40px 0; */
+  margin-top: 40px;
+  width: 90%;
 
   .movieOther {
     margin-bottom: 20px;
@@ -86,22 +113,21 @@
 
   svg {
     transform: translateY(-5px);
-  }
-
-  .movieOtherItem h2 {
-    margin-left: 10px;
+    margin-right: 10px;
   }
 
   h2 {
     font-size: 18px;
     margin-bottom: 10px;
     color: var(--PText);
+    letter-spacing: 0.05rem;
   }
 
   p {
     margin: 40px 0;
     font-size: 16px;
     color: #FFFFFF;
+    letter-spacing: 0.03rem;
   }
 
   .genreButtons {
@@ -128,56 +154,104 @@
 
 
 }
-
-.star-rating-container {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-
-  background-color: #141414;
-  border: 1px solid #262626;
-  height: auto;
-  border-radius: 50px;
-  padding: 8px;
-
-  .star-rating {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .star-rating svg {
-    width: 20px;
-    height: 20px;
-    color: var(--mainRed);
-    /* margin-right: 5px; */
-  }
-
-  h3 {
-    margin-bottom: 10px;
-    margin-left: 10px;
-  }
-
-  .rating-number {
-    font-size: 1rem;
-    color: #999999;
-    font-weight: bold;
-  }
-}
-
 .movieReviews-container {
   padding: 30px;
   background-color: var(--ButtonBackground);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 40px 0;
-  width: 60%;
+  width: 90%;
   height: auto;
 
 
+  .movieReviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .add-review-button {
+    display: flex;
+    align-items: center;
+    background-color: var(--ButtonBackground);
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .add-review-button:hover {
+    background-color: #FFFFFF;
+    color: var(--ButtonBackground);
+  }
+
+  .review-form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .review-form-container {
+    background-color: var(--ButtonBackground);
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    position: relative;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 90%;
+    }
+    label {
+      color: var(--PText);
+      font-size: 1rem;
+    }
+    button {
+      align-self: flex-end;
+      background-color: var(--ButtonBackground);
+      color: #FFFFFF;
+      border: 1px solid #FFFFFF;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    button:hover {
+      background-color: #FFFFFF;
+      color: var(--ButtonBackground);
+    }
+  }
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    letter-spacing: 0.05rem;
     color: var(--PText);
   }
 
@@ -200,6 +274,7 @@
     font-size: 18px;
     margin-bottom: 10px;
     color: var(--PText);
+    letter-spacing: 0.05rem;
   }
 
   p {
@@ -207,6 +282,7 @@
     color: #FFFFFF;
     max-height: 100px; 
     overflow-y: auto;
+    letter-spacing: 0.03rem;
   }
   .reviews-error{
     color: var(--mainRed);
@@ -215,5 +291,68 @@
     padding: 20px;
     border-radius: 8px;
     border: 1px solid var(--PText);
+  }
+}
+.movieDetailsContainer {
+  display: flex;
+  gap: 20px;
+  flex: wrap;
+  
+  .leftColumn {
+    flex: 3; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    width: 60%; 
+  }
+
+  .rightColumn {
+    flex: 2; 
+    min-width: 300px; 
+    width: 40%; 
+  }
+}
+
+
+
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .movieDetailsContainer {
+    display: grid;
+    grid-template-columns: 60% 40%; 
+    gap: 20px;
+      .leftColumn {
+        width: 100%; 
+      }
+      .rightColumn {
+        width: 90%; 
+      }
+}
+}
+
+@media (max-width: 1024px) {
+  .movieDetailsContainer{
+    .leftColumn {
+      width: 100%; /* Set both columns to full width */
+    }
+
+    .rightColumn {
+      min-width: 0; 
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .movieDetailsContainer {
+    flex-direction: column;
+  
+
+    .leftColumn,
+    .rightColumn {
+      width: 100%;
+    }
+
+    .rightColumn {
+      min-width: 0;
+    }
   }
 }

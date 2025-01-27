@@ -23,16 +23,7 @@ export default function MovieOther({  rating, releaseDate, popularity, voteCount
             <p>{releaseDate}</p>
 
         </div>
-      
-        <div className="movieOther">
-            <div className="movieOtherItem">
-                <BsStars size={24} />
-
-                <h2>Popularity</h2>
-            </div>
-            <p>{popularity}</p>
-        </div>
-      
+        
         <div className="movieOther">
             <div className="movieOtherItem">
                 <RiStarSLine size={24} />
@@ -41,13 +32,6 @@ export default function MovieOther({  rating, releaseDate, popularity, voteCount
             <StarRating title={"IMDb"} rating={rating} />
         </div>
 
-        <div className="movieOther">
-            <div className="movieOtherItem">
-                <MdHowToVote size={24} />
-                <h2>Vote Count</h2>
-            </div>
-            <p>{voteCount}</p>
-        </div>
 
         <div className="movieOther">
             <div className="movieOtherItem">
@@ -60,6 +44,26 @@ export default function MovieOther({  rating, releaseDate, popularity, voteCount
               ))}
             </div>        
         </div>
+      
+        <div className="movieOther">
+            <div className="movieOtherItem">
+                <BsStars size={24} />
+
+                <h2>Popularity</h2>
+            </div>
+            <p>{popularity}</p>
+        </div>
+      
+
+
+        <div className="movieOther">
+            <div className="movieOtherItem">
+                <MdHowToVote size={24} />
+                <h2>Vote Count</h2>
+            </div>
+            <p>{voteCount}</p>
+        </div>
+
 
         {children}
     </div>
