@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import JumboHeader from "../componants/UIComponant/JumboHeader";
-import MovieOverview from "../componants/SinglePage/MovieOverview";
-import MovieCast from "../componants/SinglePage/MovieCast";
 import MovieTrailer from "../componants/SinglePage/MovieTrailer";
 import Modal from "../componants/SinglePage/Modal";
-import MovieOther from "../componants/SinglePage/MovieOther";
-import MovieReviews from "../componants/SinglePage/MovieReviews";
+import MovieDetailsContainer from "../componants/SinglePage/MovieDetailsContainer";
 
 export default function SingleMoviePage() {
   const location = useLocation();
@@ -34,19 +31,7 @@ export default function SingleMoviePage() {
         description={movie.overview} 
         onPlayButtonClick={handlePlayButtonClick}
       />
-      
-      <MovieOverview title="Overview" description={movie.overview} />
-      <MovieCast cast={movie.cast || []} />
-      <MovieOther
-        rating={movie.vote_average}
-        releaseDate={movie.release_date}
-        popularity={movie.popularity}
-        voteCount={movie.vote_count}
-        genreIds={movie.genre_ids || []}
-      />
-      <MovieReviews movieId={movie.id} /> {/* Use the MovieReviews component */}
-
-      
+      <MovieDetailsContainer />
       <Modal show={showTrailer} onClose={handleCloseModal}>
         <MovieTrailer trailerKey={movie.trailer} title={movie.title} />
       </Modal>
