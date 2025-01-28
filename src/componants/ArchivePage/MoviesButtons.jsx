@@ -1,15 +1,14 @@
-import { FaPlay } from "react-icons/fa";
-import { FaRegThumbsUp } from "react-icons/fa";
+import { FaRegThumbsUp, FaPlay} from "react-icons/fa";
 import "../../css/movieButtons.css";
 
-export default function MoviesButtons({ onPlayButtonClick }) {
+export default function MoviesButtons({ onPlayButtonClick, onAddToLikedMovies }) {
   return (
     <div className="MoviesButtons">
       <button className="playButton" onClick={onPlayButtonClick}>
         <FaPlay />
         Play now
       </button>
-      <button className="thumbsup">
+      <button className="thumbsup" onClick={onAddToLikedMovies}>
         <FaRegThumbsUp fill="white" />
       </button>
     </div>
