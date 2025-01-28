@@ -28,6 +28,10 @@
       border-radius: 10px;
       cursor: pointer;
     }
+    .thumbsup:hover {
+      background-color: var(--PText);
+      color: aliceblue;
+    }
   }
   
   .movieGenres {

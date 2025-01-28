@@ -1,0 +1,139 @@
+.startTrail {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.125rem;
+  padding: 3.125rem 1.875rem;
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  margin-bottom: 5rem;
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    width: 18.625rem;
+    height: 9.06rem;
+    .text-head,
+    p {
+      text-align: start;
+    }
+  }
+  .btn {
+    color: white;
+    width: 8.75rem;
+    height: 3.06rem;
+    border-radius: 4px;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+    &:hover {
+      background-color: darkred;
+    }
+    p {
+      color: white;
+    }
+  }
+  .grid-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20rem;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+    text-align: center;
+  }
+  .grid-item {
+    position: relative;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 8.577rem;
+    height: 2rem;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 73%;
+    background: linear-gradient(
+      to bottom,
+      rgba(38, 20, 25, 0.99) 20%,
+      rgba(38, 20, 25, 0.9) 60%,
+      rgba(232, 0, 0, 0.3) 100%
+    );
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 1024px) {
+  .startTrail {
+    height: 15rem;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+    .text {
+      width: 100%;
+      height: 100%;
+      padding-top: 3vh;
+      display: flex;
+      flex-wrap: wrap;
+
+      flex-direction: column;
+      gap: 1.875rem;
+      .text-head {
+        margin-top: 6vh;
+      }
+      .text-head,
+      p {
+        align-self: flex-start;
+      }
+    }
+    .grid-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      gap: 10px;
+      margin: 20px auto;
+      overflow: hidden;
+      .grid-item {
+        width: 8.577rem;
+        height: 1px;
+      }
+    }
+    .overlay {
+      height: 98%;
+      background: linear-gradient(
+        to right,
+        rgba(38, 20, 25, 0.99) 20%,
+        rgba(38, 20, 25, 0.9) 50%,
+        rgba(232, 0, 0, 0.3) 100%
+      );
+    }
+  }
+}
