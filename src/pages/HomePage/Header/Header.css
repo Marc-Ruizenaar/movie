@@ -1,0 +1,123 @@
+.header {
+  color: white;
+  padding: 2.5rem 1rem 0.875rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  /* width: 24.38rem; */
+  width: 100vw;
+  min-height: 6.375rem;
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  z-index: 5;
+}
+.logo {
+  display: flex;
+  width: 2.188rem;
+  place-items: center;
+  .vector {
+    width: 2.188rem;
+    height: 2.188rem;
+  }
+  .streamVibe {
+    width: 4.96rem;
+    height: 0.73rem;
+  }
+
+  .streamVibeBig {
+    display: none;
+  }
+}
+.bigButtonContainer,
+.smallButtonContainer {
+  display: none;
+}
+.mobile-icon {
+
+  margin-right: 5rem;
+  img {
+    opacity: 0.85;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    margin-top: 3rem;
+    color: white;
+ 
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 120rem;
+    max-height: 7.5rem;
+    background: rgba(255, 255, 255, 0);
+    position: relative;
+    .logo {
+      position: relative;
+      left: 0;
+      display: flex;
+      height: 6.8rem;
+      place-items: center;
+     
+      .vector {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+      .streamVibeBig {
+        display: block;
+        width: 8.5rem;
+        height: 2rem;
+      }
+      .streamVibe {
+        display: none;
+      }
+    }
+    .mobile-icon {
+      display: none;
+    }
+    .bigButtonContainer {
+      display: block;
+      height: 7.5rem;
+      margin: auto;
+      left: 0;
+      right: 0;
+      ul {
+        width: auto;
+        height: 4.688rem;
+        display: flex;
+        gap: 1.875rem;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.625rem 2.5rem;
+        background: rgba(50, 50, 50, 0.1);
+        border: 0.0001px solid rgba(128, 128, 128, 0.1);
+        border-radius: 4px;
+        li {
+          font-size: 1.125rem;
+          font-weight: regular;
+          font-family: "Manrope", sans-serif;
+          &:hover {
+            background-color: rgba(128, 128, 128, 0.3);
+            cursor: pointer;
+            padding: 1rem 1rem;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .smallButtonContainer {
+      position: absolute;
+    
+      right: 0;
+      display: flex;
+      margin-right: 15rem;
+      height: 6.8rem;
+      width: 6.125rem;
+      place-items: center;
+      gap: 1.875rem;
+      justify-content: space-between;
+
+    }
+  }
+}
