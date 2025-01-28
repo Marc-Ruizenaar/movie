@@ -1,8 +1,7 @@
 .top-imagesContent-container {
   position: relative;
-
   width: 100vw;
-  height: 42rem;
+  height: 100vh;
   overflow: hidden;
   margin: 0 auto;
   text-align: center;
@@ -112,7 +111,7 @@
 @media (min-width: 1024px) {
   .top-imagesContent-container {
     width: 100vw;
-    height: 101.11vh;
+    height: 100vh;
 
     .top-images-container {
       width: 100%;

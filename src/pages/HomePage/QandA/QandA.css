@@ -1,4 +1,5 @@
 .QandAContainer {
+  user-select: none;
   color: white;
   font-family: "Manrope", sans-serif;
   font-size: 0.875rem;
