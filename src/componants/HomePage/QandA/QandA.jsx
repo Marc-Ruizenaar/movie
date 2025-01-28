@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import "./QandA.css";
-import "../HomePage.css";
-import minus from "../homePageImages/mobileImages/minus.png";
-import plus from "../homePageImages/mobileImages/plus.png";
+import "../../../css/QandA.css";
+import "../../../css/HomePage.css";
 
 const QandA = () => {
   const [questions, setQuestions] = useState([
     {
       index: "01",
-      toggle: false,
+      toggle: true,
       topic: "How do I get started?",
       answer:
         "To get started with StreamVibe, simply create an account by providing a username, email address, and password. Once you've created your account, you'll be able to access your device's settings, control your streaming experience, and enjoy the benefits of StreamVibe.",
@@ -65,7 +63,6 @@ const QandA = () => {
             answers to the most common questions about StreamVibe.
           </p>
         </div>
-        <button>Ask a Question</button>
       </div>
       <div className="cardContainer">
         {questions.map((question, index) => (
@@ -79,14 +76,13 @@ const QandA = () => {
               <div className="symbol">{question.toggle}</div>
               <img
                 className="toggle-icon"
-                src={question.toggle ? plus : minus}
+                src={question.toggle ? "./plus.png" : "./minus.png"}
                 alt={question.toggle ? "Expand" : "Collapse"}
               />
-             
             </div>
             {!question.toggle && (
-                <p className="smallWords">{question.answer}</p>
-              )}
+              <p className="smallWords">{question.answer}</p>
+            )}
             <div className="line"></div>
           </div>
         ))}

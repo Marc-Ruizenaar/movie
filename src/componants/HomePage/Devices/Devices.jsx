@@ -1,8 +1,8 @@
 import React from "react";
-import "./Devices.css";
-import "../HomePage.css";
+import "../../../css/Devices.css";
+import "../../../css/HomePage.css";
 
-const Devices = () => {
+export default function Devices() {
   const devices = [
     {
       id: 1,
@@ -64,7 +64,7 @@ const Devices = () => {
             <div className="thirdTitle cardTitle">
               <div className="imgBox">
                 <img
-                  src={require(`../homePageImages/mobileImages/${device.image}`)}
+                  src={`./${device.image}`}
                   alt={device.name}
                 />
               </div>
@@ -76,6 +76,4 @@ const Devices = () => {
       </div>
     </div>
   );
-};
-
-export default Devices;
+}

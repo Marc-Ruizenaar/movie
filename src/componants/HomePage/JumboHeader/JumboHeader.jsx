@@ -1,0 +1,72 @@
+import React from "react";
+import "../../../css/JumboHeaderHomepage.css";
+import "../../../css/HomePage.css";
+
+export default function JumboHeaderHome() {
+  const images = [
+    "/images/image1.png",
+    "/images/image2.png",
+    "/images/image3.png",
+    "/images/image4.png",
+    "/images/image5.png",
+    "/images/image6.png",
+    "/images/image7.png",
+    "/images/image8.png",
+    "/images/image9.png",
+    "/images/image10.png",
+    "/images/image11.png",
+    "/images/image12.png",
+    "/images/image13.png",
+    "/images/image14.png",
+    "/images/image15.png",
+    "/images/image16.png",
+    "/images/image17.png",
+    "/images/image18.png",
+    "/images/image19.png",
+    "/images/image20.png",
+    "/images/image1.png",
+    "/images/image2.png",
+    "/images/image3.png",
+    "/images/image4.png",
+    "/images/image5.png",
+    "/images/image6.png",
+    "/images/image7.png",
+    "/images/image8.png",
+    "/images/image9.png",
+    "/images/image10.png",
+    "/images/image11.png",
+    "/images/image12.png",
+    "/images/image13.png",
+    "/images/image14.png",
+    "/images/image15.png",
+    "/images/image16.png"
+  ];
+
+  return (
+    <div className="top-imagesContent-container">
+      <div className="overlay"></div>
+      <div className="top-images-container">
+        <img className="abstract-mobile" src="/abstract.png" alt="abstract-icon" />
+        <div className="textContainer">
+          <p className="heading">The Best Streaming Experience</p>
+          <p className="paragraph smallWords">
+            StreamVibe is the best streaming experience for watching your
+            favorite movies and shows on demand, anytime, anywhere.
+          </p>
+          <a className="movieButton" href="/movies">
+            <p>Start Watching Now</p>
+          </a>
+        </div>
+        <div className="grid-container">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="grid-item"
+              style={{ backgroundImage: `url(${image})` }}
+            ></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

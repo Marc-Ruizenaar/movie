@@ -1,7 +1,6 @@
 .QandAContainer {
   user-select: none;
   color: white;
-  font-family: "Manrope", sans-serif;
   font-size: 0.875rem;
   line-height: 150%;
   .QandAHead {
@@ -30,13 +29,12 @@
       gap: 1.8rem;
 
       .cardTitleRow {
+        cursor: pointer;
         display: flex;
         align-items: center;
         font-size: 1rem;
         gap: 1.75rem;
-        font-weight: regular;
         color: white;
-        font-family: "Manrope", sans-serif;
         font-size: 1.125rem;
         line-height: 150%;
         position: relative;
