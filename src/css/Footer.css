@@ -1,105 +1,115 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding-bottom: 2rem;
-  margin-top: 4rem;
-  .pageNavContainer {
-    font-family: "Manrope", sans-serif;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    row-gap: 1.875rem;
+    background-color: var(--SecondaryBackground);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  
+    
+    .pageNavContainer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .subHead {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    
     .subContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      .subLinksContainer {
+        margin: 10px;
+        text-align: left;
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+        
+        a {
+            color: var(--PText);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    .line {
+        border: 0;
+        height: 1px;
+        background: #444;
+        margin: 20px 0;
+    }
+    
+    .copyrightContainer {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        .subLink {
-          font-size: 0.875rem;
-          line-height: 150%;
-          color: grey;
-        }
-      }
-      .imgLinkContainer {
-        display: flex;
-        gap: 0.625rem;
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 2.75rem;
-          height: 2.75rem;
-          border-radius: 4px;
-          background-color: rgba(128, 128, 128, 0.1);
-          img {
-            padding: 0.75rem;
-          }
-        }
-      }
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        color: var(--PText);
+        margin: 20px;
     }
-  }
-  .line {
-    width: 100%;
-    height: 0.125rem;
-    background-color: rgba(128, 128, 128, 0.1);
-    margin-bottom: 1.875rem;
-  }
-  .copyrightContainer {
-    display: flex;
-    flex-direction: column;
-    color: grey;
-    gap: 1.25rem;
-    width: 22.375rem;
-    height: 3.875rem;
-    font-family: "Manrope", sans-serif;
-    font-size: 0.875rem;
-    line-height: 150%;
-
+    
     .policyContainer {
-      display: flex;
-      gap: 1rem;
-      width: 20rem;
-      height: 1.312rem;
-      justify-content: space-between;
+        display: flex;
+        gap: 10px;
     }
+    
     .policyLink {
-      border-left: solid 1px rgba(128, 128, 128, 0.3);
-      padding-left: 0.9rem;
+        color: var(--PText);
+        text-decoration: none;
     }
-    .policyLink1 {
-      border-left: none;
-      padding-left: 0rem;
+    
+    .policyLink:hover {
+        text-decoration: underline;
     }
-  }
+    
+    .social-links {
+        display: flex;
+        gap: 40px;
+    }
+    
+    .social-links a {
+        color: var(--PText);
+        text-decoration: none;
+    }
+    
+    .social-links a:hover {
+        color: #1da1f2; /* Example hover color for Twitter */
+    }
 }
 @media (min-width: 1024px) {
-  .footer {
-    .pageNavContainer {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(1, 1fr);
-    }
-    .line {
-      margin-top: 6.25rem;
-    }
-    .copyrightContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      height: 100%;
+    .footer {
+      .pageNavContainer {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+      }
+      .line {
+        margin-top: 6.25rem;
+      }
+      .copyrightContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+      }
       .policyContainer {
         width: 30rem;
-        .policyLink {
-          padding-left: 2rem;
-        }
+      }
+      .policyLink {
+        padding-left: 2rem;
+      }
       .policyLink3 {
         margin-right: 2rem;
-      } }
+      }
     }
-  }
 }

@@ -269,7 +269,7 @@
   }
 
   .review {
-    background-color: var(--Background);
+    background-color: var(--SecondaryBackground);
     padding: 20px;
     width: 300px; 
     border-radius: 8px;
