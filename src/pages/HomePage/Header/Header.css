@@ -35,7 +35,6 @@
   display: none;
 }
 .mobile-icon {
-
   margin-right: 5rem;
   img {
     opacity: 0.85;
@@ -45,7 +44,6 @@
   .header {
     margin-top: 3rem;
     color: white;
- 
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -59,7 +57,7 @@
       display: flex;
       height: 6.8rem;
       place-items: center;
-     
+
       .vector {
         width: 3.75rem;
         height: 3.75rem;
@@ -86,21 +84,23 @@
         width: auto;
         height: 4.688rem;
         display: flex;
-        gap: 1.875rem;
+        gap: 1rem;
         justify-content: space-between;
         align-items: center;
         padding: 0.625rem 2.5rem;
         background: rgba(50, 50, 50, 0.1);
         border: 0.0001px solid rgba(128, 128, 128, 0.1);
         border-radius: 4px;
+        padding: 1rem 1rem;
         li {
           font-size: 1.125rem;
           font-weight: regular;
           font-family: "Manrope", sans-serif;
+          box-sizing: border-box;
+          padding: 0.5rem 0.5rem;
           &:hover {
             background-color: rgba(128, 128, 128, 0.3);
             cursor: pointer;
-            padding: 1rem 1rem;
             border-radius: 5px;
           }
         }
@@ -108,7 +108,7 @@
     }
     .smallButtonContainer {
       position: absolute;
-    
+
       right: 0;
       display: flex;
       margin-right: 15rem;
@@ -117,7 +117,6 @@
       place-items: center;
       gap: 1.875rem;
       justify-content: space-between;
-
     }
   }
 }

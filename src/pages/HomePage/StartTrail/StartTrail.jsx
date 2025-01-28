@@ -61,7 +61,7 @@ const StartTrail = () => {
           rerum minima sequi explicabo unde adipisci voluptas
         </p>
       </div>
-      <button>
+      <button className="btn">
         <p>Start a Free Trail</p>
       </button>
       <div className="grid-container">

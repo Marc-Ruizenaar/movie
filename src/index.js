@@ -6,6 +6,7 @@ import App from './App';
 import { APIProvider } from './api/TMDB/fetchAPIMovies';
 import SingleMoviePage from './pages/SingleMoviesPage';
 import ArchiveMoviePage from './pages/ArchiveMoviePage';
+import GenreArchivePage from './pages/GenreArchivePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,7 @@ root.render(
           <Route path='/' element={<App />} />
           <Route path='/movies' element={<ArchiveMoviePage />} />
           <Route path='/movies/:slug' element={<SingleMoviePage />} />
+          <Route path='/genre/:genreName' element={<GenreArchivePage />} />
         </Routes>
 
       </BrowserRouter>
