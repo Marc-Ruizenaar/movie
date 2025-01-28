@@ -18,7 +18,21 @@
     height: 9.06rem;
     .text-head,
     p {
-      text-align: center;
+      text-align: start;
+    }
+  }
+  .btn {
+    color: white;
+    width: 8.75rem;
+    height: 3.06rem;
+    border-radius: 4px;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+    &:hover {
+      background-color: darkred;
+    }
+    p {
+      color: white;
     }
   }
   .grid-container {
@@ -84,7 +98,7 @@
       padding-top: 3vh;
       display: flex;
       flex-wrap: wrap;
-      align-content: center;
+
       flex-direction: column;
       gap: 1.875rem;
       .text-head {
@@ -92,11 +106,9 @@
       }
       .text-head,
       p {
-        text-align: center;
+        align-self: flex-start;
       }
     }
-
-   
     .grid-container {
       position: absolute;
       top: 0;
