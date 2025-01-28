@@ -5,12 +5,15 @@ import JumboHeader from "../componants/UIComponant/JumboHeader";
 import MovieTrailer from "../componants/SinglePage/MovieTrailer";
 import Modal from "../componants/SinglePage/Modal";
 import MovieDetailsContainer from "../componants/SinglePage/MovieDetailsContainer";
+import Header from "../componants/UIComponant/Header/Header";
+import Footer from "../componants/UIComponant/Footer/Footer";
+import Community from "../componants/HomePage/Community/Community";
 
 export default function SingleMoviePage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [showTrailer, setShowTrailer] = useState(false);
-  const { addMovieToLiked } = useLikedMovies(); // Use the context
+  const { addMovieToLiked } = useLikedMovies(); 
 
 
   if (!location.state || !location.state.movie) {
@@ -31,6 +34,7 @@ export default function SingleMoviePage() {
 
   return (
     <div className="container">
+      <Header />
       <JumboHeader 
         image={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} 
         title={movie.title} 
@@ -42,6 +46,8 @@ export default function SingleMoviePage() {
       <Modal show={showTrailer} onClose={handleCloseModal}>
         <MovieTrailer trailerKey={movie.trailer} title={movie.title} />
       </Modal>
+      <Community />
+      <Footer />
     </div>
   );
 }
