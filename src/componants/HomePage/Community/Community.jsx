@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../css/Community.css";
+import backgroundImage from "../../../assets/images/background-videos.jpg";
 
 export default function Community() {
   return (
@@ -14,7 +15,7 @@ export default function Community() {
 
       <a className="freeTrailButton" href="/movies">Start a Free Trail</a>
 
-      <img src="./background-videos.jpg" alt="" />
+      <img src={backgroundImage} alt="Background Videos" />
     </section>
   );
 }

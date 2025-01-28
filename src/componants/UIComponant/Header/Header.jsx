@@ -1,10 +1,15 @@
 import React from "react";
-import "../../../css/Header.css";
+import { Link, useLocation } from "react-router-dom"; // Import useLocation from react-router-dom
 import { IoSearch } from "react-icons/io5";
 import { FaRegBell } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Logo from "../../../assets/images/Logo.png";
+import "../../../css/Header1.css";
 
 export default function Header() {
+  const location = useLocation(); // Get the current location
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
   const navLinks = [
     { name: "Home", link: "/", label: "Go to Home" },
     { name: "Movies", link: "/movies", label: "Go to Movies and Shows" },
@@ -16,19 +21,25 @@ export default function Header() {
     { Icon: FaRegBell, altText: "Notifications", label: "Notifications" },
   ];
 
+  // Determine the background color based on the current path
+  const headerBackground = location.pathname === "/" ? "transparent" : "rgba(0, 0, 0, 0.8)";
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <header className="header">
-      <a href="/" className="logo" aria-label="Homepage">
-        <img src="./Logo.png" alt="Website logo" />
-      </a>
+    <header className="header" style={{ background: headerBackground }}>
+      <Link to="/" className="logo" aria-label="Homepage">
+        <img src={Logo} alt="Website logo" />
+      </Link>
 
       <nav className="bigButtonContainer" aria-label="Main navigation">
         <ul>
           {navLinks.map((link, index) => (
             <li key={index}>
-              <a href={link.link} aria-label={link.label}>
+              <Link to={link.link} aria-label={link.label}>
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -44,10 +55,24 @@ export default function Header() {
 
       {/* for mobile */}
       <div className="mobile-icon">
-        <button aria-label="Open mobile menu">
+        <button aria-label="Open mobile menu" onClick={toggleMobileMenu}>
           <GiHamburgerMenu fill="white" size={30} />
         </button>
       </div>
+
+      {isMobileMenuOpen && (
+        <div className="mobile-menu">
+          <ul>
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link to={link.link} aria-label={link.label} onClick={toggleMobileMenu}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 }

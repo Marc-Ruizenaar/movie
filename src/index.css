@@ -136,6 +136,8 @@ table {
   --Background: #141414;
   --ButtonBackground: #1A1A1A;
   --PText: #999999;
+  --SecondaryBackground: #0F0F0F;
+  --lineColor: #1F1F1F;
 }
 
 body {
