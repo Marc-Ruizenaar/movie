@@ -4,6 +4,9 @@ import JumboHeader from "../componants/UIComponant/JumboHeader";
 import MovieTrailer from "../componants/SinglePage/MovieTrailer";
 import Modal from "../componants/SinglePage/Modal";
 import MovieDetailsContainer from "../componants/SinglePage/MovieDetailsContainer";
+import Header from "../pages/HomePage/Header/Header";
+import Footer from "../pages/HomePage/Footer/Footer";
+import StartTrail from "../pages/HomePage/StartTrail/StartTrail";
 
 export default function SingleMoviePage() {
   const location = useLocation();
@@ -25,6 +28,7 @@ export default function SingleMoviePage() {
 
   return (
     <div className="container">
+      <Header />
       <JumboHeader 
         image={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} 
         title={movie.title} 
@@ -35,6 +39,8 @@ export default function SingleMoviePage() {
       <Modal show={showTrailer} onClose={handleCloseModal}>
         <MovieTrailer trailerKey={movie.trailer} title={movie.title} />
       </Modal>
+      <StartTrail />
+      <Footer />
     </div>
   );
 }
