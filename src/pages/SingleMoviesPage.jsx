@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useLikedMovies } from "../componants/LikedMovies/LikedMoviesContext";
 import JumboHeader from "../componants/UIComponant/JumboHeader";
 import MovieTrailer from "../componants/SinglePage/MovieTrailer";
 import Modal from "../componants/SinglePage/Modal";
@@ -12,6 +13,8 @@ export default function SingleMoviePage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [showTrailer, setShowTrailer] = useState(false);
+  const { addMovieToLiked } = useLikedMovies(); // Use the context
+
 
   if (!location.state || !location.state.movie) {
     navigate('/movies');
@@ -25,6 +28,9 @@ export default function SingleMoviePage() {
   const handleCloseModal = () => {
     setShowTrailer(false);
   };
+  const handleLikeButtonClick = () => {
+    addMovieToLiked(movie);
+  };
 
   return (
     <div className="container">
@@ -34,6 +40,7 @@ export default function SingleMoviePage() {
         title={movie.title} 
         description={movie.overview} 
         onPlayButtonClick={handlePlayButtonClick}
+        onAddToLikedMovies={handleLikeButtonClick} 
       />
       <MovieDetailsContainer />
       <Modal show={showTrailer} onClose={handleCloseModal}>
