@@ -1,4 +1,4 @@
-import "../../../css/Categories.css";
+import "../../../css/categories.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Genres({ amount }) {
@@ -38,79 +38,81 @@ export default function Genres({ amount }) {
     },
     {
       name: "Animation",
-      img: "",
+      img: "/genres/animation.png",
       link: "/genre/animation",
-      screenReader: "",
+      screenReader: "Enjoy beautifully crafted animated films for all ages.",
     },
     {
       name: "Crime",
-      img: "",
+      img: "/genres/crime.png",
       link: "/genre/crime",
-      screenReader: "",
+      screenReader: "Dive into crime films full of mystery and intrigue.",
     },
     {
       name: "Documentary",
-      img: "",
+      img: "/genres/documentary.png",
       link: "/genre/documentary",
-      screenReader: "",
+      screenReader:
+        "Learn from real-life stories with our documentary collection.",
     },
     {
       name: "Family",
-      img: "",
+      img: "/genres/family.png",
       link: "/genre/family",
-      screenReader: "",
+      screenReader: "Enjoy heartwarming family-friendly films for all ages.",
     },
     {
       name: "Fantasy",
-      img: "",
+      img: "/genres/fantasy.png",
       link: "/genre/fantasy",
-      screenReader: "",
+      screenReader:
+        "Step into magical worlds with our fantasy movie selection.",
     },
     {
       name: "History",
-      img: "",
+      img: "/genres/history.png",
       link: "/genre/history",
-      screenReader: "",
+      screenReader: "Explore historical films that bring the past to life.",
     },
     {
       name: "Music",
-      img: "",
+      img: "/genres/music.png",
       link: "/genre/music",
-      screenReader: "",
+      screenReader: "Experience the magic of music through film.",
     },
     {
       name: "Mystery",
-      img: "",
+      img: "/genres/mystery.png",
       link: "/genre/mystery",
-      screenReader: "",
+      screenReader: "Uncover secrets with our collection of mystery films.",
     },
     {
       name: "Romance",
-      img: "",
+      img: "/genres/romance.png",
       link: "/genre/romance",
-      screenReader: "",
+      screenReader: "Fall in love with our romantic movie selection.",
     },
     {
       name: "Thriller",
-      img: "",
+      img: "/genres/thriller.png",
       link: "/genre/thriller",
-      screenReader: "",
+      screenReader: "Feel the suspense with our collection of thriller films.",
     },
     {
       name: "War",
-      img: "",
+      img: "/genres/war.png",
       link: "/genre/war",
-      screenReader: "",
+      screenReader:
+        "Experience the intensity of war films and historical battles.",
     },
     {
       name: "Western",
-      img: "",
+      img: "/genres/western.png",
       link: "/genre/western",
-      screenReader: "",
+      screenReader: "Ride into the world of Westerns with cowboy adventures.",
     },
   ];
 
-  // Slice the categories array based on the amount prop
   const displayedCategories = categories.slice(0, amount);
 
   return (
@@ -124,18 +126,18 @@ export default function Genres({ amount }) {
       </div>
 
       <div className="genresGrid">
-        {displayedCategories.map((categorie, index) => (
+        {displayedCategories.map((category, index) => (
           <a
             className="genreSingle"
             key={index}
-            href={categorie.link}
-            aria-label={categorie.screenReader}
+            href={category.link}
+            aria-label={category.screenReader}
           >
             <div className="imageWrapper">
-              <img src={categorie.img} alt={categorie.name} />
+              <img loading="lazy" src={category.img} alt={category.name} />
             </div>
             <div className="inner">
-              <h3>{categorie.name}</h3>
+              <h3>{category.name}</h3>
               <FaArrowRightLong fill="white" />
             </div>
           </a>

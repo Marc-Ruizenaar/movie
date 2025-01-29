@@ -1,6 +1,4 @@
-import React from "react";
-import "../../../css/JumboHeaderHomepage.css";
-import "../../../css/HomePage.css";
+import "../../../css/jumboHeaderHomepage.css";
 
 export default function JumboHeaderHome() {
   const images = [

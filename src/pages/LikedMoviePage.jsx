@@ -1,4 +1,3 @@
-import React from "react";
 import "../css/likedMoviePage.css";
 import LikedMoviesList from "../componants/LikedMovies/LikedMoviesList";
 import Header from "../componants/UIComponant/Header/Header";

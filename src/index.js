@@ -10,6 +10,7 @@ import ArchiveMoviePage from './pages/ArchiveMoviePage';
 import GenreArchivePage from './pages/GenreArchivePage';
 import LikedMoviePage from './pages/LikedMoviePage';
 import GenresPage from './pages/GenresPage';
+import SearchPage from './pages/SearchPage';
 
 // Set global SEO elements as it's a fake project
 const setGlobalSEO = () => {
@@ -41,6 +42,7 @@ root.render(
             <Route path='/genre/:genreName' element={<GenreArchivePage />} />
             <Route path='/genres' element={<GenresPage />} />
             <Route path='/liked' element={<LikedMoviePage />} />
+            <Route path='/search-results' element={<SearchPage />} />
           </Routes>
         </BrowserRouter>
       </APIProvider>

@@ -1,7 +1,4 @@
-import React from "react";
-import "../../../css/Footer.css";
-import { FaTwitter, FaLinkedin } from "react-icons/fa";
-import { IoLogoFacebook } from "react-icons/io";
+import "../../../css/footer.css";
 import SocialLinks from "./SocialLinks"; 
 
 const SubContainer = ({ title, links }) => {
