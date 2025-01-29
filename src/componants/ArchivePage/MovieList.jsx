@@ -5,10 +5,13 @@ import { HiCalendarDateRange } from "react-icons/hi2";
 import StarSmaller from "./StarSmaller";
 import "../../css/StarSmaller.css";
 import "../../css/MovieGrid.css";
+import fetchMovies from "../../api/TMDB/fetchMoviesBasedOnGenres";
 
 export default function MovieList({ category }) {
   const [filteredMovies, setFilteredMovies] = useState([]);
-  const { movies, loading, error } = useAPI();
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { movies } = useAPI();
   const navigate = useNavigate();
 
   // Generate slug for the URL
@@ -20,18 +23,26 @@ export default function MovieList({ category }) {
   };
 
   useEffect(() => {
-    // If category is provided, filter movies based on category
-    if (category && movies) {
-      const categoryMovies = movies.filter((movie) =>
-        movie.genre_ids.includes(parseInt(category))
-      );
-      setFilteredMovies(categoryMovies);
-    } else {
-      setFilteredMovies(movies);
-    }
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        if (category) {
+          const data = await fetchMovies(category);
+          setFilteredMovies(data.results);
+        } else {
+          setFilteredMovies(movies);
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
   }, [category, movies]);
 
-  if (loading) return <div>Loading...</div>;
+  if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (

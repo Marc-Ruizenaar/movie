@@ -39,22 +39,25 @@ export default function JumboHeaderHome() {
     "/images/image13.png",
     "/images/image14.png",
     "/images/image15.png",
-    "/images/image16.png"
+    "/images/image16.png",
   ];
 
   return (
-    <div className="top-imagesContent-container">
+    <section className="top-imagesContent-container">
       <div className="overlay"></div>
       <div className="top-images-container">
-        <img className="abstract-mobile" src="/abstract.png" alt="abstract-icon" />
+        <img
+          className="abstract-mobile"
+          src="/abstract.png"
+          alt="abstract-icon"
+        />
         <div className="textContainer">
-          <p className="heading">The Best Streaming Experience</p>
+          <p className="heading">Find the best movies</p>
           <p className="paragraph smallWords">
-            StreamVibe is the best streaming experience for watching your
-            favorite movies and shows on demand, anytime, anywhere.
+            We have a amazing collection of almost 95% of every movie ever made!
           </p>
-          <a className="movieButton" href="/movies">
-            <p>Start Watching Now</p>
+          <a className="movieButton" href="/movies" aria-label="Search movies">
+            Start searching now
           </a>
         </div>
         <div className="grid-container">
@@ -67,6 +70,6 @@ export default function JumboHeaderHome() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

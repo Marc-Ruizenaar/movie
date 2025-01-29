@@ -6,14 +6,13 @@ export default function Community() {
   return (
     <section className="Community">
       <div>
-        <h2>Start your free trial today!</h2>
+        <h2>Start searching now!</h2>
         <p>
-          This is a clear and concise call to action that encourages users to
-          sign up for a free trial of StreamVibe.
+          Where are you waiting on? The movie business doesen't wait!
         </p>
       </div>
 
-      <a className="freeTrailButton" href="/movies">Start a Free Trail</a>
+      <a className="freeTrailButton" href="/movies" aria-label="Search movies">Search movies</a>
 
       <img src={backgroundImage} alt="Background Videos" />
     </section>

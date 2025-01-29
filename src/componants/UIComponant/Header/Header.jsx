@@ -4,7 +4,7 @@ import { IoSearch } from "react-icons/io5";
 import { FaRegBell } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Logo from "../../../assets/images/Logo.png";
-import "../../../css/Header1.css";
+import "../../../css/Header.css";
 
 export default function Header() {
   const location = useLocation(); // Get the current location
@@ -13,6 +13,7 @@ export default function Header() {
   const navLinks = [
     { name: "Home", link: "/", label: "Go to Home" },
     { name: "Movies", link: "/movies", label: "Go to Movies and Shows" },
+    { name: "Genres", link: "/genres", label: "Go to Genres" },
     { name: "Liked movies", link: "/liked", label: "Go to Liked movies" }
   ];
 

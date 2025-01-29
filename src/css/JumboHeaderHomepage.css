@@ -93,7 +93,7 @@
 }
 @media (min-width: 1024px) {
   .top-imagesContent-container {
-    margin-left: calc(-50vw + 50%);
+    margin-left: calc(-50vw + 49%);
     width: 100vw;
     height: 800px;
 
