@@ -5,12 +5,11 @@ import Genres from "../componants/HomePage/Genres/Genres";
 export default function GenresPage() {
    return (
     <main>
-      <Header />
 
       <div className="container">
+        <Header />
         <Genres />
       </div>
-
       <Footer />
     </main>
   );

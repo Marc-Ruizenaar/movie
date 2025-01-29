@@ -4,6 +4,7 @@
     padding: 20px;
     text-align: center;
     margin-top: 40px;
+    width: 100%;
   
     
     .pageNavContainer {
@@ -82,7 +83,7 @@
     }
     
     .social-links a:hover {
-        color: #1da1f2; /* Example hover color for Twitter */
+        color: #1da1f2; 
     }
 }
 @media (min-width: 1024px) {
@@ -100,7 +101,6 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        height: 100%;
       }
       .policyContainer {
         width: 30rem;
