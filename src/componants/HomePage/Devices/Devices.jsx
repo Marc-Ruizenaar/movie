@@ -1,6 +1,4 @@
-import React from "react";
-import "../../../css/Devices.css";
-import "../../../css/HomePage.css";
+import "../../../css/devices.css";
 
 export default function Devices() {
   const devices = [

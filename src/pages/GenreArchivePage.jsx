@@ -4,7 +4,7 @@ import fetchGenres from "../api/TMDB/fetchGenres";
 import MovieList from "../componants/ArchivePage/MovieList";
 import Header from "../componants/UIComponant/Header/Header";
 import Footer from "../componants/UIComponant/Footer/Footer";
-import "../css/Genres.css";
+import "../css/genres.css";
 
 export default function GenreArchivePage() {
   const [genreId, setGenreId] = useState(null);

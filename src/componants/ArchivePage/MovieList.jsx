@@ -3,9 +3,9 @@ import { useAPI } from "../../api/TMDB/fetchAPIMovies";
 import { useNavigate } from "react-router-dom";
 import { HiCalendarDateRange } from "react-icons/hi2";
 import StarSmaller from "./StarSmaller";
-import "../../css/StarSmaller.css";
-import "../../css/MovieGrid.css";
 import fetchMovies from "../../api/TMDB/fetchMoviesBasedOnGenres";
+import "../../css/starSmaller.css";
+import "../../css/movieGrid.css";
 
 export default function MovieList({ category }) {
   const [filteredMovies, setFilteredMovies] = useState([]);
@@ -48,7 +48,7 @@ export default function MovieList({ category }) {
   return (
     <div className="MovieGrid">
       {filteredMovies.map((movie) => (
-        <a
+        <button
           className="inner"
           key={movie.id}
           onClick={() =>
@@ -68,7 +68,7 @@ export default function MovieList({ category }) {
             </span>
             <StarSmaller rating={movie.vote_average} />
           </div>
-        </a>
+        </button>
       ))}
     </div>
   );

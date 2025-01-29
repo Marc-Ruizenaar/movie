@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../../../css/QandA.css";
-import "../../../css/HomePage.css";
 
 const QandA = () => {
   const [questions, setQuestions] = useState([

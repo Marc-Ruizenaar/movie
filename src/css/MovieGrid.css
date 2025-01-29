@@ -23,6 +23,8 @@
         background-color: #1A1A1A;
         border: 1px solid #262626;
         border-radius: 10px;
+        width: 100%;
+        cursor: pointer;
 
         .content {
             display: flex;
@@ -37,6 +39,10 @@
                 gap: 5px;
                 align-items: center;
                 border-radius: 100px;
+
+                p {
+                    color: white;
+                }
             }
         }
 
