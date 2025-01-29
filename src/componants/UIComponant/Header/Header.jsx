@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState } from "react";
 import { Link, useLocation } from "react-router-dom"; // Import useLocation from react-router-dom
 import { IoSearch } from "react-icons/io5";
 import { FaRegBell } from "react-icons/fa6";
@@ -6,9 +6,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Logo from "../../../assets/images/Logo.png";
 import "../../../css/Header.css";
 
+
 export default function Header() {
-  const location = useLocation(); // Get the current location
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const location = useLocation(); 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", link: "/", label: "Go to Home" },
@@ -22,14 +23,15 @@ export default function Header() {
     { Icon: FaRegBell, altText: "Notifications", label: "Notifications" },
   ];
 
-  // Determine the background color based on the current path
-  const headerBackground = location.pathname === "/" ? "transparent" : "rgba(0, 0, 0, 0.8)";
+  const headerBackground = location.pathname === "/" ? "transparent" : "rgba(0, 0, 0, 0.1)";
+  const headerPosition = location.pathname === "/" ? "absolute" : "relative";
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <header className="header" style={{ background: headerBackground }}>
+    <header className="header" style={{ background: headerBackground, position: headerPosition }}>
       <Link to="/" className="logo" aria-label="Homepage">
         <img src={Logo} alt="Website logo" />
       </Link>
