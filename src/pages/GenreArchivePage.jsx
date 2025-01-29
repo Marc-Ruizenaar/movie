@@ -2,33 +2,44 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import fetchGenres from "../api/TMDB/fetchGenres";
 import MovieList from "../componants/ArchivePage/MovieList";
+import Header from "../componants/UIComponant/Header/Header";
+import Footer from "../componants/UIComponant/Footer/Footer";
+import "../css/Genres.css";
 
 export default function GenreArchivePage() {
-  const [genres, setGenres] = useState([]);
+  const [genreId, setGenreId] = useState(null);
   const { genreName } = useParams();
 
   useEffect(() => {
     const loadGenres = async () => {
       try {
         const genreData = await fetchGenres();
-        setGenres(genreData);
+
+        // Find the corresponding genre ID
+        const genre = genreData.find(
+          (g) => g.name.toLowerCase() === genreName?.toLowerCase()
+        );
+        if (genre) {
+          setGenreId(genre.id);
+        }
       } catch (error) {
         console.error("Error fetching genres:", error);
       }
     };
 
     loadGenres();
-  }, []);
-
-  console.log("Genres:", genres);
+  }, [genreName]);
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">
-        Browse Genres {genreName ? ` ${genreName}` : ""}
-      </h1>
+    <main>
+      <Header />
 
-      <MovieList category={genreName} />
-    </div>
+      <div className="container genres">
+        <h1>Browse Genres {genreName ? ` ${genreName}` : ""}</h1>
+
+        {genreId && <MovieList category={genreId} />}
+      </div>
+      <Footer />
+    </main>
   );
 }

@@ -1,4 +1,4 @@
-import Categories from "./Categories/Categories";
+import Genres from "./Genres/Genres";
 import Devices from "./Devices/Devices";
 import QandA from "./QandA/QandA";
 import Community from "./Community/Community";
@@ -13,7 +13,7 @@ export default function HomePage() {
     <div className="homePage">
       <Header />
       <JumboHeaderHome />
-      <Categories />
+      <Genres amount="5" />
       <Devices />
       <QandA />
       <Community />

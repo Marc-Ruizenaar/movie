@@ -1,37 +1,93 @@
 .header {
   width: 100%;
-  color: white;
-  padding: 1rem 0 0.875rem 0;
-  text-align: center;
-  align-items: center;
+  color: var(--PText);
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0);
-  position: absolute;
+  background: var(--background);
+  position: relative;
   z-index: 5;
 }
 
 .logo {
   display: flex;
 
-  .vector {
-    width: 2.188rem;
-    height: 2.188rem;
+  img {
+    width: 100%;
+    height: auto;
   }
+}
 
-  .streamVibe {
-    width: 4.96rem;
-    height: 0.73rem;
-  }
+.mobile-icon {
+  display: none;
+}
 
-  .streamVibeBig {
-    display: none;
+.bigButtonContainer {
+  border: 2px solid var(--lineColor);
+  border-radius: 5px;
+  gap: 20px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+      padding: 15px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      border: 1px solid var(--background);
+    }
+
+    li:hover {
+      background-color: var(--lineColor);
+      color: white;
+    }
   }
 }
 
 @media (max-width: 1024px) {
+
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
+    /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 10;
+
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
   .smallButtonContainer {
     display: none;
   }
@@ -39,70 +95,47 @@
   .bigButtonContainer {
     display: none;
   }
-}
 
-@media (min-width: 1024px) {
-  .header {
-    width: 100%;
-    color: white;
+  .mobile-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
+    top: 60px;
+    /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 10;
 
-    .logo {
-      position: relative;
-      display: flex;
 
-      .vector {
-        width: 3.75rem;
-        height: 3.75rem;
-      }
-
-      .streamVibeBig {
-        width: 8.5rem;
-        height: 2rem;
-      }
-
-      .streamVibe {
-        display: none;
-      }
+    ul {
+      margin: 0 10px;
+      padding: 20px 0;
+      border: 1px solid var(--background);
     }
 
-    .mobile-icon {
-      display: none;
+    li {
+      margin: 20px 0;
+      display: block;
+      text-align: center;
+      font-size: 1rem;
     }
 
-    .bigButtonContainer {
-
-      ul {
-        width: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: rgba(50, 50, 50, 0.2);
-        border: 2px solid rgba(128, 128, 128, 0.1);
-        border-radius: 4px;
-
-        li {
-          font-size: 1.125rem;
-          box-sizing: border-box;
-          padding: 1rem 1.5rem;
-
-          &:hover {
-            background-color: rgba(128, 128, 128, 0.3);
-            cursor: pointer;
-            border-radius: 5px;
-          }
-        }
-      }
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
     }
 
-    .smallButtonContainer {
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
+    a:hover {
+      text-decoration: underline;
     }
   }
 }

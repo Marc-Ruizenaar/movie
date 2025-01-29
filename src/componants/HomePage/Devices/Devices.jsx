@@ -51,11 +51,10 @@ export default function Devices() {
     <div className="devicesContainer">
       <div className="devicesHead">
         <h2 className="subtitle">
-          We Provide you streaming experience across various devices.
+          We Provide you with the best experience across various devices.
         </h2>
         <p className="smallWords">
-          With StreamVibe, you can enjoy your favorite movies and TV shows
-          anytime, anywhere.
+          With StreamVibe, you can find your favorite movies anytime.
         </p>
       </div>
       <div className="cardContainer">
