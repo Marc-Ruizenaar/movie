@@ -1,3 +1,5 @@
+import { fetchCast, fetchTrailer } from "./fetchTrailer";
+
 export default async function fetchSearchResults(searchInput) {
     const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(searchInput)}&include_adult=false&language=en-US&page=1`;
     const options = {
@@ -14,7 +16,14 @@ export default async function fetchSearchResults(searchInput) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        return data;
+        const moviesWithDetails = await Promise.all(
+            data.results.map(async (movie) => {
+                const trailerKey = await fetchTrailer(movie.id);
+                const cast = await fetchCast(movie.id);
+                return { ...movie, trailer: trailerKey, cast };
+            })
+        );
+        return { results: moviesWithDetails };
     } catch (error) {
         console.error("Error fetching search results:", error);
         return null;
