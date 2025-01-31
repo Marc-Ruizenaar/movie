@@ -1,4 +1,4 @@
-# Movie Database Project
+# Movie Database Project Using React
 
 ## Description
 This project is a movie database application that allows users to browse, search, and view details about movies. It uses the TMDB API to retrieve movie data, including trailers and cast information.
@@ -9,12 +9,7 @@ This project is a movie database application that allows users to browse, search
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [APIs](#apis)
-- [Components](#components)
-- [CSS Files](#css-files)
-- [Pages](#pages)
 - [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 - [ComingSoon](#Some-of-those-Coming-Soon)
 
 ## Installation
@@ -35,8 +30,11 @@ To run the project, use the following command:
 # Start the development server
 npm start
 
-Project Structure
+```
+
+## Project Structure
 This document outlines the structure of the project, including its APIs, components, CSS files, and pages.
+```bash
 
 ├── api                    
 │   ├── TMDB
@@ -124,10 +122,11 @@ This document outlines the structure of the project, including its APIs, compone
 ├── package.json                   # Project dependencies and scripts
 └── README.md                      # Project documentation
 
-APIs
+```
+## APIs
 TMDB API: Used for retrieving movie/series data, including trailers and cast information.
 
-Contributing
+## Contributing
 
 Marc:
 
@@ -138,3 +137,6 @@ Odai:
 
 
 Yali
+
+
+## Coming Soon
