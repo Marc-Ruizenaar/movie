@@ -15,13 +15,14 @@ This project is a movie database application that allows users to browse, search
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
+- [ComingSoon](#Some-of-those-Coming-Soon)
 
 ## Installation
 Follow these steps to set up the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/your-repo.git
+git clone git@github.com:Marc-Ruizenaar/movie.git
 
 # Navigate to the project directory
 cd your-repo
