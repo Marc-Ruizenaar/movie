@@ -7,11 +7,10 @@ export const LikedMoviesProvider = ({ children }) => {
 
   const addMovieToLiked = (movie) => {
     setLikedMovies((prevMovies) => {
-      // Check if the movie is already in the liked movies list
       if (prevMovies.some((likedMovie) => likedMovie.id === movie.id)) {
-        return prevMovies; // Return the existing list if the movie is already liked
+        return prevMovies; 
       }
-      return [...prevMovies, movie]; // Add the movie to the list if it's not already liked
+      return [...prevMovies, movie]; 
     });
   };
 

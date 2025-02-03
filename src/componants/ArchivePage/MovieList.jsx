@@ -35,14 +35,20 @@ export default function MovieList({ category }) {
       } catch (err) {
         setError(err.message);
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
     };
 
     fetchData();
   }, [category, movies]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div class="load-wrapp">
+    <div class="load-3">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
   if (error) return <div>Error: {error}</div>;
 
   return (

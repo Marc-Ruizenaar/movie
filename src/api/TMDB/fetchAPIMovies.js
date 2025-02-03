@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { fetchTrailer, fetchCast } from './fetchTrailer';
+import '../../css/movieGrid.css';
 
 const APIMoviesContext = createContext();
 
@@ -41,7 +42,14 @@ export const APIProvider = ({ children }) => {
     useEffect(() => {
         fetchMovies();
     }, []);
-
+if (loading) return <div class="load-wrapp">
+<div class="load-3">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
+</div>;
+if (error) return <div>Error: {error}</div>;
     return (
         <APIMoviesContext.Provider value={{ movies, loading, error }}>
             {children}
