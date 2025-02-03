@@ -24,8 +24,10 @@ cd your-repo
 
 # Install dependencies
 npm install
+```
 
-Usage
+## Usage
+```bash
 To run the project, use the following command:
 # Start the development server
 npm start
@@ -129,14 +131,23 @@ TMDB API: Used for retrieving movie/series data, including trailers and cast inf
 ## Contributing
 
 Marc:
-
+- Movie useContext – Implement a React useContext for managing the top 20 movies across the app.
+- Genres API – Fetch movie genres from an API.
+- Movie Page – A dedicated page to display detailed information about a specific movie.
+- Genres Page – A page listing movies categorized by genres, fetched by the API.
+- Search Page and Functionality – Implement a search feature to find movies by title.
+- Including the styling of all those pages .
 
 
 Odai:
+- Setting up the SingleMoviePage with all its components and functionality.
+- Setting up the LikedMoviePage with all its components and functionality.
+- Fixing the slugs functionality and the review, cast, and trailer features.
+- Helped restructure some of the HomePage code.
+- Including the styling of all those pages.
 
-
-
-Yali
+Yali:
+I did the homepage, I divide the homepage to 7 components, for example: Header, Footer, Devices, Genres,QandA..., include their css as well.   Make sure the page suit for different size of screen. Since some components will be used for other pages also, so I did my job first.
 
 
 ## Coming Soon
