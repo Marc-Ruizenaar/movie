@@ -39,7 +39,7 @@ export default function Search({ isOpen }) {
             autoFocus
           />
 
-          <button type="submit">Search movies</button>
+          <button type="submit">Search Movies</button>
         </form>
       </div>
     </div>

@@ -42,11 +42,11 @@ export const APIProvider = ({ children }) => {
     useEffect(() => {
         fetchMovies();
     }, []);
-if (loading) return <div class="load-wrapp">
-<div class="load-3">
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
+if (loading) return <div className="load-wrapp">
+<div className="load-3">
+  <div className="line"></div>
+  <div className="line"></div>
+  <div className="line"></div>
 </div>
 </div>;
 if (error) return <div>Error: {error}</div>;

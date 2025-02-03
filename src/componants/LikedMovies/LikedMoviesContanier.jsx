@@ -14,13 +14,14 @@ export default function LikedMoviesContaner() {
       <div className="liked-movies-page container">
         <Header />
         <LikedMoviesList />
-        
-      </div>
-        <div className="footer-sec">
-      <Community />
 
-        <Footer />  
+      </div>
+      <div className="footer-sec">
+        <div className="container">
+          <Community />
         </div>
+        <Footer />
+      </div>
     </main>
   );
 }

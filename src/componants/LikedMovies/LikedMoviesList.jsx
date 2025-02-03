@@ -10,7 +10,7 @@ export default function LikedMoviesList() {
     <div className="liked-movies-container">
       <h2>Liked Movies</h2>
       {likedMovies.length === 0 ? (
-        <p>No liked movies yet.</p>
+        <p>No Liked Movies Yet.</p>
       ) : (
         <ul>
           {likedMovies.map((movie) => (

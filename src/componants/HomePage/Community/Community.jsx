@@ -4,7 +4,7 @@ export default function Community() {
   return (
     <section className="Community">
       <div>
-        <h2>Start searching now!</h2>
+        <h2>Start Searching Now!</h2>
         <p>
           Where are you waiting on? The movie business doesen't wait!
         </p>

@@ -6,7 +6,7 @@ export default function MoviesButtons({ onPlayButtonClick, onAddToLikedMovies })
     <div className="MoviesButtons">
       <button className="playButton" onClick={onPlayButtonClick}>
         <FaPlay />
-        Play now
+        Play Now
       </button>
       <button className="thumbsup" onClick={onAddToLikedMovies}>
         <FaRegThumbsUp fill="white" />
