@@ -10,18 +10,15 @@ import "../../css/likedMoviePage.css";
 
 export default function LikedMoviesContaner() {
   return (
-    <main>
-      <div className="liked-movies-page container">
+    <>
+      <div className="liked-movies-page">
         <Header />
         <LikedMoviesList />
-
       </div>
-      <div className="footer-sec">
-        <div className="container">
-          <Community />
-        </div>
-        <Footer />
+      <div className="container">
+        <Community />
       </div>
-    </main>
+      <Footer />
+    </>
   );
 }

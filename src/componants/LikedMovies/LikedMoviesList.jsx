@@ -1,10 +1,11 @@
 import React from "react";
 import { useLikedMovies } from "./LikedMoviesContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../css/likedMoviePage.css";
 
 export default function LikedMoviesList() {
   const { likedMovies, removeMovieFromLiked } = useLikedMovies();
+  const navigate = useNavigate();
   const generateSlug = (title) => {
     return title
       .toLowerCase()
@@ -24,15 +25,12 @@ export default function LikedMoviesList() {
               <div className="movie-details">
                 <h3>{movie.title}</h3>
                 <button onClick={() => removeMovieFromLiked(movie.id)}>Remove</button>
-                <Link
+                <button
                   className="link"
-                  to={{
-                    pathname: `/movies/${generateSlug(movie.title)}`,
-                    state: { movie },
-                  }}
+                  onClick={() => navigate(`/movies/${generateSlug(movie.title)}`, { state: { movie } })}
                 >
                   View Details
-                </Link>              
+                </button>              
                 </div>
             </li>
           ))}
