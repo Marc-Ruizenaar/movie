@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useLikedMovies } from "../componants/LikedMovies/LikedMoviesContext";
 import JumboHeader from "../componants/UIComponant/JumboHeader";
@@ -14,13 +14,17 @@ export default function SingleMoviePage() {
   const navigate = useNavigate();
   const [showTrailer, setShowTrailer] = useState(false);
   const { addMovieToLiked } = useLikedMovies();
+  const  movie  = location.state.movie;
 
 
-  if (!location.state || !location.state.movie) {
-    navigate('/movies');
-    return null;
-  }
-  const { movie } = location.state;
+
+  useEffect(() => {
+    if (!movie) {
+      navigate("/");
+    }
+  }, [movie, navigate])
+
+
 
   const handlePlayButtonClick = () => {
     setShowTrailer(true);
