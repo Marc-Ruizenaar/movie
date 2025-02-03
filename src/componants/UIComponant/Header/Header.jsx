@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 import { FaRegBell } from "react-icons/fa6";
+import { FaRegThumbsUp } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Search from "./Search";
 import "../../../css/header.css";
@@ -15,7 +16,7 @@ export default function Header() {
     { name: "Home", link: "/", label: "Go to Home" },
     { name: "Movies", link: "/movies", label: "Go to Movies and Shows" },
     { name: "Genres", link: "/genres", label: "Go to Genres" },
-    { name: "Liked movies", link: "/liked", label: "Go to Liked movies" },
+    { name: "Liked Movies", link: "/liked", label: "Go to Liked movies" },
   ];
 
   const smallButtons = [
@@ -25,7 +26,12 @@ export default function Header() {
       label: "Search",
       onClick: () => searchHandle(),
     },
-    { Icon: FaRegBell, altText: "Notifications", label: "Notifications" },
+    {
+      Icon: FaRegThumbsUp,
+      altText: "Notifications",
+      label: "Notifications",
+      onClick: () => (window.location.href = "/liked"),
+    },
   ];
 
   const searchHandle = () => {

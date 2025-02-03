@@ -13,7 +13,7 @@ export default function SingleMoviePage() {
   const location = useLocation();
   const navigate = useNavigate();
   const [showTrailer, setShowTrailer] = useState(false);
-  const { addMovieToLiked } = useLikedMovies(); 
+  const { addMovieToLiked } = useLikedMovies();
 
 
   if (!location.state || !location.state.movie) {
@@ -22,8 +22,8 @@ export default function SingleMoviePage() {
   }
   const { movie } = location.state;
 
-  const handlePlayButtonClick = () => 
-    {setShowTrailer(true);
+  const handlePlayButtonClick = () => {
+    setShowTrailer(true);
   };
   const handleCloseModal = () => {
     setShowTrailer(false);
@@ -33,21 +33,25 @@ export default function SingleMoviePage() {
   };
 
   return (
-    <div className="container">
+    <>
       <Header />
-      <JumboHeader 
-        image={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} 
-        title={movie.title} 
-        description={movie.overview} 
-        onPlayButtonClick={handlePlayButtonClick}
-        onAddToLikedMovies={handleLikeButtonClick} 
-      />
-      <MovieDetailsContainer />
-      <Modal show={showTrailer} onClose={handleCloseModal}>
-        <MovieTrailer trailerKey={movie.trailer} title={movie.title} />
-      </Modal>
-      <Community />
+
+      <div className="container">
+        <JumboHeader
+          image={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+          title={movie.title}
+          description={movie.overview}
+          onPlayButtonClick={handlePlayButtonClick}
+          onAddToLikedMovies={handleLikeButtonClick}
+        />
+        <MovieDetailsContainer />
+        <Modal show={showTrailer} onClose={handleCloseModal}>
+          <MovieTrailer trailerKey={movie.trailer} title={movie.title} />
+        </Modal>
+        <Community />
+      </div>
       <Footer />
-    </div>
+
+    </>
   );
 }

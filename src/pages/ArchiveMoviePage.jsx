@@ -5,11 +5,15 @@ import Community from "../componants/HomePage/Community/Community";
 
 export default function ArchiveMoviePage() {
   return (
-    <div className="container">
+    <>
       <Header />
-      <MovieList />
-      <Community />
+
+      <div className="container">
+        <MovieList />
+        <Community />
+      </div>
       <Footer />
-    </div>
+    </>
+
   );
 }

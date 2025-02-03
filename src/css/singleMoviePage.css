@@ -6,7 +6,6 @@
   height: auto;
   /* margin: 40px 0; */
   margin-top: 40px;
-  width: 90%;
 
   h2 {
     font-size: 1.25rem;
@@ -31,7 +30,6 @@
   height: auto;
   /* margin: 40px 0; */
   margin-top: 20px;
-  width: 90%;
   user-select: none;
 
   h2 {
@@ -101,7 +99,6 @@
   height: auto;
   /* margin: 40px 0; */
   margin-top: 40px;
-  width: 90%;
 
   .movieOther {
     /* margin-top: 20px; */
@@ -166,7 +163,6 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
-  width: 90%;
   height: auto;
 
 
@@ -301,8 +297,7 @@
 }
 .movieDetailsContainer {
   display: flex;
-  gap: 10px;
-  flex: wrap;
+  gap: 20px;
   
   .leftColumn {
     flex: 3; 

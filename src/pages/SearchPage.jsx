@@ -35,7 +35,7 @@ export default function SearchPage() {
       <div className="container search">
         <Header />
 
-        <h1>Search Results for: {query}</h1>
+        <h1>Search Results For: {query}</h1>
         {resultsData.map((movie) => (
           <button
             key={movie.id}
@@ -51,7 +51,7 @@ export default function SearchPage() {
               <p>{changeText(movie.overview)}</p>
             </div>
 
-            <p className="button">Go to movie</p>
+            <p className="button">Go To Movie</p>
           </button>
         ))}
 

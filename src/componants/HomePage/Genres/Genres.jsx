@@ -118,7 +118,7 @@ export default function Genres({ amount }) {
   return (
     <section className="categories">
       <div>
-        <h2>Explore our wide variety of movie genres</h2>
+        <h2>Explore Our Wide Variety Of Movie Genres</h2>
         <p>
           Whether you're looking for a comedy to make you laugh, a drama to make
           you think, or a documentary to learn something new.

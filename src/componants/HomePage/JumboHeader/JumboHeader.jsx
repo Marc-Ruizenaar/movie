@@ -50,12 +50,12 @@ export default function JumboHeaderHome() {
           alt="abstract-icon"
         />
         <div className="textContainer">
-          <p className="heading">Find the best movies</p>
+          <p className="heading">Find The Best Movies</p>
           <p className="paragraph smallWords">
-            We have a amazing collection of almost 95% of every movie ever made!
+            We Have A Amazing Collection Of Almost 95% Of Every Movie Ever Made!
           </p>
           <a className="movieButton" href="/movies" aria-label="Search movies">
-            Start searching now
+            Start Searching Now
           </a>
         </div>
         <div className="grid-container">

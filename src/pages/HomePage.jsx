@@ -11,11 +11,13 @@ export default function HomePage() {
   return (
     <div className="homePage">
       <Header />
+      <div className="container">
       <JumboHeaderHome />
       <Genres amount="5" />
       <Devices />
       <QandA />
       <Community />
+      </div>
       <Footer />
     </div>
   );
