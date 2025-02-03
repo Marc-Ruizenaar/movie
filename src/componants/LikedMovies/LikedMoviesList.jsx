@@ -5,12 +5,17 @@ import "../../css/likedMoviePage.css";
 
 export default function LikedMoviesList() {
   const { likedMovies, removeMovieFromLiked } = useLikedMovies();
-
+  const generateSlug = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/[^\w-]+/g, "");
+  };
   return (
     <div className="liked-movies-container">
       <h2>Liked Movies</h2>
       {likedMovies.length === 0 ? (
-        <p>No Liked Movies Yet.</p>
+        <p>No liked movies yet.</p>
       ) : (
         <ul>
           {likedMovies.map((movie) => (
@@ -19,8 +24,16 @@ export default function LikedMoviesList() {
               <div className="movie-details">
                 <h3>{movie.title}</h3>
                 <button onClick={() => removeMovieFromLiked(movie.id)}>Remove</button>
-                <Link className="link" to={{ pathname: `/movies/${movie.id}`, state: { movie } }}>View Details</Link>
-              </div>
+                <Link
+                  className="link"
+                  to={{
+                    pathname: `/movies/${generateSlug(movie.title)}`,
+                    state: { movie },
+                  }}
+                >
+                  View Details
+                </Link>              
+                </div>
             </li>
           ))}
         </ul>
