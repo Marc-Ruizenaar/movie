@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function MovieCast({ cast }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCastCount = 5; // Number of cast members to show at a time
+  const visibleCastCount = 5;
 
   if (!cast || cast.length === 0) {
     return <p>No cast information available.</p>;
