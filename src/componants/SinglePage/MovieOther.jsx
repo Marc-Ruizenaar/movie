@@ -40,7 +40,7 @@ export default function MovieOther({  rating, releaseDate, popularity, voteCount
             </div>
             <div className="genreButtons">
               {genreNames.map((genre, index) => (
-                <button key={index} className="genreButton">{genre}</button>
+                <a key={index} className="genreButton" href={`/genre/${genre}`}>{genre}</a>
               ))}
             </div>        
         </div>

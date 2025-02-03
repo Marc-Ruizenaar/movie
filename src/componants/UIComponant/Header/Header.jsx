@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
-import { FaRegBell } from "react-icons/fa6";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Search from "./Search";
@@ -62,7 +61,7 @@ export default function Header() {
       <nav className="bigButtonContainer" aria-label="Main navigation">
         <ul>
           {navLinks.map((link, index) => (
-            <li key={index}>
+            <li key={index} className={location.pathname === link.link ? "active" : ""}>
               <Link to={link.link} aria-label={link.label}>
                 {link.name}
               </Link>
