@@ -1,6 +1,7 @@
 import React from "react";
 import "../../css/singleMoviePage.css";
 
+// MovieOverview component to display the movie overview
 export default function MovieOverview({ title, description, children }) {
   return (
     <div className="movieOverview">

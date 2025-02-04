@@ -14,14 +14,14 @@ export default function MovieList({ category }) {
   const { movies } = useAPI();
   const navigate = useNavigate();
 
-  // Generate slug for the URL
+  // Function to generate a URL-friendly slug from a movie title
   const generateSlug = (title) => {
     return title
       .toLowerCase()
       .replace(/ /g, "-")
       .replace(/[^\w-]+/g, "");
   };
-
+  // Effect to fetch movies based on category or all movies
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,6 +42,7 @@ export default function MovieList({ category }) {
     fetchData();
   }, [category, movies]);
 
+  // Render loading state with some animation
   if (isLoading) return <div className="load-wrapp">
     <div className="load-3">
       <div className="line"></div>
@@ -51,6 +52,7 @@ export default function MovieList({ category }) {
   </div>
   if (error) return <div>Error: {error}</div>;
 
+  // Render movie list
   return (
     <div className="MovieGrid">
       {filteredMovies.map((movie) => (
@@ -69,6 +71,7 @@ export default function MovieList({ category }) {
           />
           <div className="content">
             <span className="time">
+              {/* Display rating and release date */}
               <HiCalendarDateRange size={20} fill="#999999" />
               <p>{movie.release_date}</p>
             </span>

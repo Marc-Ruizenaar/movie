@@ -1,6 +1,7 @@
 import "../../../css/devices.css";
 
 export default function Devices() {
+  // Array of device objects with id, name, image, and content
   const devices = [
     {
       id: 1,
@@ -55,6 +56,7 @@ export default function Devices() {
           With StreamVibe, you can find your favorite movies anytime.
         </p>
       </div>
+      {/* Map through the devices array and display each device */}
       <div className="cardContainer">
         {devices.map((device) => (
           <div key={device.id} className="deviceCard ">

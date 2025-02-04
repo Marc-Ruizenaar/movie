@@ -36,6 +36,7 @@ root.render(
       <APIProvider>
         <BrowserRouter>
           <Routes>
+            {/* Define routes for the app */}
             <Route path='/' element={<App />} />
             <Route path='/movies' element={<ArchiveMoviePage />} />
             <Route path='/movies/:slug' element={<SingleMoviePage />} />

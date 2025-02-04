@@ -4,8 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "../../css/likedMoviePage.css";
 
 export default function LikedMoviesList() {
+  // Get liked movies and remove movie from liked movies function from context
   const { likedMovies, removeMovieFromLiked } = useLikedMovies();
+  // Use navigate hook to navigate to a different page
   const navigate = useNavigate();
+  // Function to generate a URL-friendly slug from a movie title
   const generateSlug = (title) => {
     return title
       .toLowerCase()
@@ -25,6 +28,7 @@ export default function LikedMoviesList() {
               <div className="movie-details">
                 <h3>{movie.title}</h3>
                 <button onClick={() => removeMovieFromLiked(movie.id)}>Remove</button>
+                {/* Button to navigate to movie details page */}
                 <button
                   className="link"
                   onClick={() => navigate(`/movies/${generateSlug(movie.title)}`, { state: { movie } })}

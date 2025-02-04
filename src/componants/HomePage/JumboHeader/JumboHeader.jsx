@@ -1,6 +1,7 @@
 import "../../../css/jumboHeaderHomepage.css";
 
 export default function JumboHeaderHome() {
+  // Array of images to display in the grid
   const images = [
     "/images/image1.png",
     "/images/image2.png",
@@ -58,6 +59,7 @@ export default function JumboHeaderHome() {
             Start Searching Now
           </a>
         </div>
+      {/* Display the grid of images */}              
         <div className="grid-container">
           {images.map((image, index) => (
             <div

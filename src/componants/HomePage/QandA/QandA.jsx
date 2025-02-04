@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../../css/QandA.css";
 
 const QandA = () => {
+  // Array of question objects with index, toggle, topic, and answer
   const [questions, setQuestions] = useState([
     {
       index: "01",
@@ -63,6 +64,7 @@ const QandA = () => {
           </p>
         </div>
       </div>
+      {/* Map through the questions array and display each question */}
       <div className="cardContainer">
         {questions.map((question, index) => (
           <div key={question.index} className="questionCard">

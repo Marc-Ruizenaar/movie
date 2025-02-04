@@ -8,6 +8,7 @@ import { useState } from "react";
 
 export default function MovieCast({ cast }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  // Number of cast members to display at a time
   const visibleCastCount = 5;
 
   if (!cast || cast.length === 0) {
@@ -23,7 +24,7 @@ export default function MovieCast({ cast }) {
       Math.min(prevIndex + 1, cast.length - visibleCastCount)
     );
   };
-
+  // Get the visible cast members based on the current index
   const visibleCast = cast.slice(currentIndex, currentIndex + visibleCastCount);
 
   return (
@@ -36,7 +37,7 @@ export default function MovieCast({ cast }) {
         </div>
       </div>
       
-
+      {/* Render the visible cast members */}
       <ul>
         {visibleCast.map((actor) => (
           <li key={actor.id}>

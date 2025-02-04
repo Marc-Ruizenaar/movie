@@ -6,7 +6,7 @@ import MovieReviews from "./MovieReviews";
 import { useLocation, useNavigate } from "react-router-dom";
 
 
-
+// MovieDetailsContainer component to display movie details
 export default function MovieDetailsContainer() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -14,6 +14,7 @@ export default function MovieDetailsContainer() {
         navigate('/movies');
         return null;
     }
+    // Destructure movie data from location state
     const { movie } = location.state;  
 
     return (

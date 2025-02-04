@@ -1,6 +1,6 @@
 import React from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-
+// Calculate the number of full, half, and empty stars same as StarSmaller.jsx
 export default function StarRating({ rating }) {
   const fullStars = Math.floor(rating / 2);
   const halfStar = rating % 2 >= 1 ? 1 : 0;

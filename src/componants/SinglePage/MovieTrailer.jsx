@@ -1,11 +1,13 @@
 import React from "react";
 
+// MovieTrailer component to display the movie trailer
 export default function MovieTrailer({ trailerKey, title }) {
   if (!trailerKey) {
     return null;
   }
 
   return (
+    // Display the movie trailer
     <div>
       <iframe
         width="560"
