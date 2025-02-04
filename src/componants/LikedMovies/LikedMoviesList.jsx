@@ -1,6 +1,6 @@
 import React from "react";
 import { useLikedMovies } from "./LikedMoviesContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../../css/likedMoviePage.css";
 
 export default function LikedMoviesList() {
