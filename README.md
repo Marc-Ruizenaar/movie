@@ -142,12 +142,15 @@ Marc:
 Odai:
 - Setting up the SingleMoviePage with all its components and functionality.
 - Setting up the LikedMoviePage with all its components and functionality.
+- Setting Styling functionality to the code like (StarRating, Trailer PopUp, ReviewForm PopUp, Loading Animation, Heder BigButtons est.. )
 - Fixing the slugs functionality and the review, cast, and trailer features.
 - Helped restructure some of the HomePage code.
 - Including the styling of all those pages.
 
 Yali:
-I did the homepage, I divide the homepage to 7 components, for example: Header, Footer, Devices, Genres,QandA..., include their css as well.   Make sure the page suit for different size of screen. Since some components will be used for other pages also, so I did my job first.
+- I did the homepage, I divide the homepage to 7 components, for example: Header, Footer, Devices, Genres,QandA...,
+- Include their css as well.
+- Make sure the page suit for different size of screen, since some components will be used for other pages also, so I did my job first.
 
 
 ## Coming Soon
