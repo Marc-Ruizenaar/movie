@@ -11,6 +11,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
+  // Navigation links
   const navLinks = [
     { name: "Home", link: "/", label: "Go to Home" },
     { name: "Movies", link: "/movies", label: "Go to Movies and Shows" },
@@ -32,7 +33,7 @@ export default function Header() {
       onClick: () => (window.location.href = "/liked"),
     },
   ];
-
+  // Function to handle search button click
   const searchHandle = () => {
     if (isSearchOpen === true) {
       setIsSearchOpen(false);
@@ -40,11 +41,12 @@ export default function Header() {
       setIsSearchOpen(true);
     }
   }
-
+  // Header background color and position based on the current page
   const headerBackground =
     location.pathname === "/" ? "transparent" : "rgba(0, 0, 0, 0.1)";
   const headerPosition = location.pathname === "/" ? "absolute" : "relative";
 
+  // Function to toggle mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };

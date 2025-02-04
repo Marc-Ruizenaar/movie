@@ -16,16 +16,14 @@ export default function SingleMoviePage() {
   const { addMovieToLiked } = useLikedMovies();
   const  movie  = location.state.movie;
 
-
-
+  // Redirect to home page if no movie data is found Ryan helped me with this
   useEffect(() => {
     if (!movie) {
       navigate("/");
     }
   }, [movie, navigate])
 
-
-
+  // The names is self-explanatory
   const handlePlayButtonClick = () => {
     setShowTrailer(true);
   };

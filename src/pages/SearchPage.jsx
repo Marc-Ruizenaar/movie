@@ -20,7 +20,7 @@ export default function SearchPage() {
       .replace(/ /g, "-")
       .replace(/[^\w-]+/g, "");
   };
-
+  // Function to change the text if it is more than 20 words
   const changeText = (text) =>
     text?.split(" ").length > 20
       ? text.split(" ").slice(0, 20).join(" ") + "..."

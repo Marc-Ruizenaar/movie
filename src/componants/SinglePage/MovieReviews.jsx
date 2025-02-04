@@ -3,12 +3,12 @@ import { fetchReviews } from "../../api/TMDB/fetchTrailer";
 import { LuPlus } from "react-icons/lu";
 import ReviewForm from "./ReviewForm";
 
-
+// Function to strip HTML tags from a string
 function stripHtmlTags(str) {
     if (!str) return "";
     return str.replace(/<\/?[^>]+(>|$)/g, "");
 }
-
+// MovieReviews component to display reviews for a movie
 export default function MovieReviews({ movieId }) {
   const [reviews, setReviews] = useState([]);
   const [showForm, setShowForm] = useState(false);
@@ -21,7 +21,7 @@ export default function MovieReviews({ movieId }) {
 
     getReviews();
   }, [movieId]);
-  
+  // Function to handle form submission
   const handleFormSubmit = (newReview) => {
     setReviews([...reviews, { ...newReview, id: Date.now() }]);
   };
@@ -34,9 +34,11 @@ export default function MovieReviews({ movieId }) {
           <LuPlus />Add Review
           </button>
         </div>
+        {/* Display review form */}
         {showForm && (
           <ReviewForm onSubmit={handleFormSubmit} onClose={() => setShowForm(false)} />
         )}
+        {/* Display reviews */}
         <div className="movieReviews">
           {reviews.length === 0 ? (
               <p className="reviews-error">No reviews available.</p>

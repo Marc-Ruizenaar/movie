@@ -10,7 +10,7 @@ export default function Community() {
         </p>
       </div>
 
-      <a className="freeTrailButton" href="/movies" aria-label="Search movies">Search movies</a>
+      <a className="freeTrailButton" href="/movies" aria-label="Search movies">Search Movies</a>
 
       <img loading="lazy" src="/background-videos.jpg" alt="Background Videos" />
     </section>

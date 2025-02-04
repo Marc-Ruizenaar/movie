@@ -2,6 +2,7 @@ import "../../../css/categories.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Genres({ amount }) {
+  // Array of category objects with name, image, link, and screenReader
   const categories = [
     {
       name: "Action",
@@ -124,7 +125,7 @@ export default function Genres({ amount }) {
           you think, or a documentary to learn something new.
         </p>
       </div>
-
+      {/* Map through the categories array and display each category */}
       <div className="genresGrid">
         {displayedCategories.map((category, index) => (
           <a

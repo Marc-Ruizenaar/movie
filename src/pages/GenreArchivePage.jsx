@@ -10,6 +10,7 @@ export default function GenreArchivePage() {
   const [genreId, setGenreId] = useState(null);
   const { genreName } = useParams();
 
+  // Fetch genre ID based on the genre name from the URL
   useEffect(() => {
     const loadGenres = async () => {
       try {
@@ -36,7 +37,7 @@ export default function GenreArchivePage() {
 
       <div className="container genres">
         <h1>Browse Genres {genreName ? ` ${genreName}` : ""}</h1>
-
+        {/* Display movie list based on genre ID */}
         {genreId && <MovieList category={genreId} />}
       </div>
       <Footer />

@@ -8,6 +8,7 @@ import { BsStars } from "react-icons/bs";
 import { RiStarSLine } from "react-icons/ri";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 
+// MovieOther component to display additional movie information
 export default function MovieOther({  rating, releaseDate, popularity, voteCount, children, genreIds }) {
     const genreNames = genreIds.map(id => genreMapping[id] || "Unknown");
 
