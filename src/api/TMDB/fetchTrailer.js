@@ -27,7 +27,7 @@ export const fetchCast = async (movieId) => {
   }
 };
 
-// Function to fetch the reviews of a movie from the API
+// Function to fetch the reviews of a movie from the API with the movie ID
 export const fetchReviews = async (movieId) => {
   try {
     const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${API_KEY}`);
