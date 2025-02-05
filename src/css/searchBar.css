@@ -23,7 +23,7 @@
     }
 
     button {
-        background-color: red;
+        background-color: var(--mainRed);
         margin-right: 20px;
         font-weight: bold;
         padding: 20px 25px;
