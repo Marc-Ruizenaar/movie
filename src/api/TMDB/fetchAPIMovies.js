@@ -2,7 +2,10 @@ import React, { createContext, useState, useEffect, useContext } from 'react';
 import { fetchTrailer, fetchCast } from './fetchTrailer';
 import '../../css/movieGrid.css';
 
+
 const APIMoviesContext = createContext();
+const BEARERKEY = process.env.REACT_APP_TMDB_BREARER;
+
 // Provider component to manage API movies state
 export const APIProvider = ({ children }) => {
     const [movies, setMovies] = useState([]);
@@ -15,7 +18,7 @@ export const APIProvider = ({ children }) => {
             method: 'GET',
             headers: {
                 accept: 'application/json',
-                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZDU5MTEyMjIyNTI0N2YyZTUwODBjNTViODM4ZGFkNCIsIm5iZiI6MTczNzQ2MDY0Ny4wMDcsInN1YiI6IjY3OGY4YmE2NDM3NTg5ZjM4NjViMzNlZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.O0J1pktH5uEx92R-uEeh_9RGQ7mOiCcCh3bOcM0Ho2A'
+                Authorization: `Bearer ${BEARERKEY}`
             }
         };
         // Fetch movie data from the API
@@ -45,15 +48,15 @@ export const APIProvider = ({ children }) => {
     useEffect(() => {
         fetchMovies();
     }, []);
-if (loading) return <div className="load-wrapp">
-<div className="load-3">
-  <div className="line"></div>
-  <div className="line"></div>
-  <div className="line"></div>
-</div>
-</div>;
+    if (loading) return <div className="load-wrapp">
+        <div className="load-3">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+        </div>
+    </div>;
 
-if (error) return <div>Error: {error}</div>;
+    if (error) return <div>Error: {error}</div>;
 
     // Provide the API movies state and functions to the context
     return (
