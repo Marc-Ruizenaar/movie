@@ -1,10 +1,12 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { fetchTrailer, fetchCast } from './fetchTrailer';
 import '../../css/movieGrid.css';
+import dotenv from 'dotenv';
 
+dotenv.config();
 
 const APIMoviesContext = createContext();
-const BEARERKEY = process.env.REACT_APP_TMDB_BREARER;
+const BEARERKEY = process.env.REACT_APP_TMDB_BEARER;
 
 // Provider component to manage API movies state
 export const APIProvider = ({ children }) => {

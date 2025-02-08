@@ -1,7 +1,11 @@
 import { fetchTrailer, fetchCast } from './fetchTrailer';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const BEARERKEY = process.env.REACT_APP_TMDB_BEARER;
 
 export default async function fetchMovies(category) {
-    const BEARERKEY = process.env.REACT_APP_TMDB_BREARER;
     const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${category}`;
     const options = {
         method: 'GET',
