@@ -9,16 +9,17 @@ import "../css/homePage.css";
 
 export default function HomePage() {
   return (
-    <div className="homePage">
+    // This could be a main tag instead of a div, and then you wouldn't have to set it in individual components
+    <main className="homePage">
       <Header />
       <div className="container">
-      <JumboHeaderHome />
-      <Genres amount="5" />
-      <Devices />
-      <QandA />
-      <Community />
+        <JumboHeaderHome />
+        <Genres amount="5" />
+        <Devices />
+        <QandA />
+        <Community />
       </div>
       <Footer />
-    </div>
+    </main>
   );
 }
