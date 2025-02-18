@@ -1,13 +1,14 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { fetchTrailer, fetchCast } from './fetchTrailer';
 import '../../css/movieGrid.css';
-import dotenv from 'dotenv';
 
-dotenv.config();
 
 const APIMoviesContext = createContext();
 const BEARERKEY = process.env.REACT_APP_TMDB_BEARER;
+const BASE_URL = process.env.REACT_APP_TMDB_BASE_URL;
 
+console.log('Bearer Key:', BEARERKEY);
+console.log('Base URL:', BASE_URL)
 // Provider component to manage API movies state
 export const APIProvider = ({ children }) => {
     const [movies, setMovies] = useState([]);
@@ -15,7 +16,7 @@ export const APIProvider = ({ children }) => {
     const [error, setError] = useState(null);
     // Fetch movies from the API
     const fetchMovies = async () => {
-        const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
+        const url = `${BASE_URL}/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`;
         const options = {
             method: 'GET',
             headers: {
@@ -28,6 +29,11 @@ export const APIProvider = ({ children }) => {
             setLoading(true);
             const response = await fetch(url, options);
             const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
             // Fetch trailer and cast for each movie
             const moviesWithTrailers = await Promise.all(
                 data.results.map(async (movie) => {
