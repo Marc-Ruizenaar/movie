@@ -3,6 +3,7 @@ import { IoLogoFacebook } from "react-icons/io";
 
 export default function SocialLinks() {
   return (
+    // these should be in a list for better accessibility
     <div className="social-links">
       <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
         <FaTwitter size={24} />

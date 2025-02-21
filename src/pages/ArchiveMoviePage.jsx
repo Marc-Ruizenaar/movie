@@ -7,13 +7,18 @@ export default function ArchiveMoviePage() {
   return (
     <>
       <Header />
-
-      <div className="container">
-        <MovieList />
-        <Community />
-      </div>
+      <MainContent />
       <Footer />
     </>
-
   );
 }
+
+// for readability, the MainContent component can be moved to a separate component
+const MainContent = () => {
+  return (
+    <div className="container">
+      <MovieList />
+      <Community />
+    </div>
+  );
+};

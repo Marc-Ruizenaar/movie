@@ -6,17 +6,14 @@ import Header from "../componants/UIComponant/Header/Header";
 import Footer from "../componants/UIComponant/Footer/Footer";
 import "../css/genres.css";
 
-export default function GenreArchivePage() {
+// refactor for readability
+const useGenreId = (genreName) => {
   const [genreId, setGenreId] = useState(null);
-  const { genreName } = useParams();
 
-  // Fetch genre ID based on the genre name from the URL
   useEffect(() => {
     const loadGenres = async () => {
       try {
         const genreData = await fetchGenres();
-
-        // Find the corresponding genre ID
         const genre = genreData.find(
           (g) => g.name.toLowerCase() === genreName?.toLowerCase()
         );
@@ -31,15 +28,25 @@ export default function GenreArchivePage() {
     loadGenres();
   }, [genreName]);
 
+  return genreId;
+};
+
+// refactor for readability
+const MainContent = ({ genreName, genreId }) => (
+  <div className="container genres">
+    <h1>Browse Genres {genreName ? ` ${genreName}` : ""}</h1>
+    {genreId && <MovieList category={genreId} />}
+  </div>
+);
+
+export default function GenreArchivePage() {
+  const { genreName } = useParams();
+  const genreId = useGenreId(genreName);
+
   return (
     <main>
       <Header />
-
-      <div className="container genres">
-        <h1>Browse Genres {genreName ? ` ${genreName}` : ""}</h1>
-        {/* Display movie list based on genre ID */}
-        {genreId && <MovieList category={genreId} />}
-      </div>
+      <MainContent genreName={genreName} genreId={genreId} />
       <Footer />
     </main>
   );

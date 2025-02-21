@@ -9,9 +9,11 @@ export default function SearchPage() {
   const { results, query } = location.state || {};
   const navigate = useNavigate();
 
-  const resultsData = results.results;
-
-  console.log(resultsData);
+  // can be simplified to just return <div>No results found</div>
+  if (!results?.results) {
+    return <div>No results found</div>;
+  }
+  // remove console.log from production code
 
   // Generate slug for the URL
   const generateSlug = (title) => {
@@ -26,17 +28,13 @@ export default function SearchPage() {
       ? text.split(" ").slice(0, 20).join(" ") + "..."
       : text;
 
-  if (!resultsData) {
-    return <div>No results found</div>;
-  }
-
   return (
     <main>
       <div className="container search">
         <Header />
 
         <h1>Search Results For: {query}</h1>
-        {resultsData.map((movie) => (
+        {results.results.map((movie) => (
           <button
             key={movie.id}
             className="searchResult"

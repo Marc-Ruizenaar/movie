@@ -29,21 +29,21 @@ export default function Search({ isOpen }) {
   if (!isOpen) return null;
 
   return (
-    <div className="searchBar">
-      <div>
-        <form onSubmit={handleSearch}>
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search movies..."
-            className="search-input"
-            autoFocus
-          />
+    // could remove the redundant div
+    // can move classname directly to the form element
+    <form className="searchBar" onSubmit={handleSearch}>
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        placeholder="Search movies..."
+        className="search-input"
+        // on key down enter, submit the form to search without having to click the button
+        onKeyDown={(e) => e.key === "Enter" && handleSearch}
+        autoFocus
+      />
 
-          <button type="submit">Search Movies</button>
-        </form>
-      </div>
-    </div>
+      <button type="submit">Search Movies</button>
+    </form>
   );
 }
