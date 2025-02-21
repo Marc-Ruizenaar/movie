@@ -1,35 +1,36 @@
 .searchBar {
-    position: absolute;
-    top: 100px;
-    background: black;
-    width: 100%;
-    border-radius: 20px;
+  position: absolute;
+  top: 100px;
+  background: black;
+  width: 100%;
+  border-radius: 20px;
 
-    form {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-    }
-    
-    input {
-        background-color: transparent;
-        border: none;
-        outline: none;
-        color: white;
-        font-size: 1.2rem;
-        padding: 40px;
-        width: 60%;
-    }
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
 
-    button {
-        background-color: var(--mainRed);
-        margin-right: 20px;
-        font-weight: bold;
-        padding: 20px 25px;
-        border-radius: 5px;
-        cursor: pointer;
-        width: max-content;
-        color: white;
-    }
+  input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 40px;
+    /* fix to make sure the classname can be on form */
+    width: calc(100% - 250px);
+  }
+
+  button {
+    background-color: var(--mainRed);
+    margin-right: 20px;
+    font-weight: bold;
+    padding: 20px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: max-content;
+    color: white;
+  }
 }

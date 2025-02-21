@@ -8,7 +8,8 @@ export default function StarSmaller({ rating, title }) {
 
   return (
     <div className="starsSmaller-rating-container">
-      {title ? <h3>{title}</h3> : ""}
+      {/* better to use && for this usecase */}
+      {title && <h3>{title}</h3>}
 
       <div className="star-rating">
         <div>
