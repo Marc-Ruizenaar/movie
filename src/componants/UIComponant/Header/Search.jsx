@@ -38,6 +38,8 @@ export default function Search({ isOpen }) {
         onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Search movies..."
         className="search-input"
+        // on key down enter, submit the form to search without having to click the button
+        onKeyDown={(e) => e.key === "Enter" && handleSearch}
         autoFocus
       />
 
