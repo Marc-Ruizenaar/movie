@@ -1,5 +1,5 @@
 import "../../../css/footer.css";
-import SocialLinks from "./SocialLinks"; 
+import SocialLinks from "./SocialLinks";
 
 const SubContainer = ({ title, links }) => {
   return (
@@ -8,7 +8,9 @@ const SubContainer = ({ title, links }) => {
       <ul>
         {links.map((link, index) => (
           <li key={index}>
-            <a href="/" aria-label={link}>{link}</a>
+            <a href="/" aria-label={link}>
+              {link}
+            </a>
           </li>
         ))}
       </ul>
@@ -42,10 +44,17 @@ export default function Footer() {
       <hr className="line" />
       <div className="copyrightContainer">
         <div className="copyright">@2025 StreamVibe, All Rights Reserved</div>
+        {/* these should also be in a list */}
         <div className="policyContainer">
-          <a href="/" className="policyLink" aria-label="Terms of Use">Terms of Use</a>
-          <a href="/" className="policyLink" aria-label="Privacy Policy">Privacy Policy</a>
-          <a href="/" className="policyLink" aria-label="Cookie Policy">Cookie Policy</a>
+          <a href="/" className="policyLink" aria-label="Terms of Use">
+            Terms of Use
+          </a>
+          <a href="/" className="policyLink" aria-label="Privacy Policy">
+            Privacy Policy
+          </a>
+          <a href="/" className="policyLink" aria-label="Cookie Policy">
+            Cookie Policy
+          </a>
         </div>
       </div>
     </footer>
