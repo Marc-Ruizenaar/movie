@@ -9,7 +9,7 @@ import "../css/homePage.css";
 
 export default function HomePage() {
   return (
-    <div className="homePage">
+    <main className="homePage">
       <Header />
       <div className="container">
       <JumboHeaderHome />
@@ -19,6 +19,6 @@ export default function HomePage() {
       <Community />
       </div>
       <Footer />
-    </div>
+    </main>
   );
 }

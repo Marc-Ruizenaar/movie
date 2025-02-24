@@ -40,6 +40,7 @@ export default function GenreArchivePage() {
         {/* Display movie list based on genre ID */}
         {genreId && <MovieList category={genreId} />}
       </div>
+      
       <Footer />
     </main>
   );

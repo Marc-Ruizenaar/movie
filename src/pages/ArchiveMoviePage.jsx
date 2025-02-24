@@ -7,13 +7,11 @@ export default function ArchiveMoviePage() {
   return (
     <>
       <Header />
-
-      <div className="container">
+      <main className="container">
         <MovieList />
         <Community />
-      </div>
+      </main>
       <Footer />
     </>
-
   );
 }

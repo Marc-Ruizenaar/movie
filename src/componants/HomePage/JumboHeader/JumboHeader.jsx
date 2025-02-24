@@ -42,7 +42,7 @@ export default function JumboHeaderHome() {
   ];
 
   return (
-    <section className="top-imagesContent-container">
+    <section className="jumboHeaderHomepage">
       <div className="overlay"></div>
       <div className="top-images-container">
         <img

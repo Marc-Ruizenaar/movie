@@ -3,7 +3,7 @@ import "../../css/movieButtons.css";
 
 export default function MoviesButtons({ onPlayButtonClick, onAddToLikedMovies }) {
   return (
-    <div className="MoviesButtons">
+    <div className="moviesButtons">
       <button className="playButton" onClick={onPlayButtonClick}>
         <FaPlay />
         Play Now

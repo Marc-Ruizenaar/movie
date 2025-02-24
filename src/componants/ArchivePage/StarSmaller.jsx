@@ -7,8 +7,8 @@ export default function StarSmaller({ rating, title }) {
   const emptyStars = 5 - fullStars - halfStar;
 
   return (
-    <div className="starsSmaller-rating-container">
-      {title ? <h3>{title}</h3> : ""}
+    <div className="starsSmallerRating">
+      {title && <h3>{title}</h3>}
 
       <div className="star-rating">
         <div>

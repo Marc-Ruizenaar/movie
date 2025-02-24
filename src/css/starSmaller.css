@@ -1,4 +1,4 @@
-.starsSmaller-rating-container {
+.starsSmallerRating {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -65,9 +65,7 @@
   .star-rating svg {
     width: 20px;
     height: 20px;
-    color: var(--mainRed);
-    /* margin-right: 5px; */
-    
+    color: var(--mainRed);    
   }
 
   h3 {
@@ -79,6 +77,5 @@
     font-size: 1.2rem;
     color: #FFFFFF;
     font-weight: bold;
-    /* transform: translateY(-5px); */
   }
 }
