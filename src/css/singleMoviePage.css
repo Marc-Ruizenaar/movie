@@ -4,7 +4,6 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: auto;
-  /* margin: 40px 0; */
   margin-top: 40px;
 
   h2 {
@@ -28,7 +27,6 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: auto;
-  /* margin: 40px 0; */
   margin-top: 20px;
   user-select: none;
 
@@ -63,7 +61,6 @@
   }
   ul {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
     list-style: none;
     overflow-x: auto;
@@ -97,11 +94,9 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: auto;
-  /* margin: 40px 0; */
   margin-top: 40px;
 
   .movieOther {
-    /* margin-top: 20px; */
     display: flex;
     flex-direction: column;
     margin: 10px 0;
@@ -121,13 +116,11 @@
 
   h2 {
     font-size: 1.25rem;
-    /* margin-bottom: 20px; */
     color: var(--PText);
     letter-spacing: 0.05rem;
   }
 
   p {
-    /* margin: 40px 0; */
     font-size: 1rem;
     color: #FFFFFF;
     letter-spacing: 0.03rem;
@@ -138,7 +131,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* margin: 20px 0; */
     margin: 10px;
   }
 

@@ -2,7 +2,7 @@ import "../../../css/community.css";
 
 export default function Community() {
   return (
-    <section className="Community">
+    <section className="community">
       <div>
         <h2>Start Searching Now!</h2>
         <p>

@@ -9,7 +9,7 @@ export default function Modal({ show, onClose, children }) {
 
   return (
     // Modal overlay to show the Trailer in a popup window
-    <div className="modal-overlay">
+    <div className="modalOverlay">
       <div className="modal-content">
         <button className="modal-close" onClick={onClose}>
           <IoMdClose size={30} />

@@ -4,14 +4,11 @@
     background: black;
     width: 100%;
     border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 
-    form {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-    }
-    
     input {
         background-color: transparent;
         border: none;

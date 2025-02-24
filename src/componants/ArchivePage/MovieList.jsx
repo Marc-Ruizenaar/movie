@@ -54,7 +54,7 @@ export default function MovieList({ category }) {
 
   // Render movie list
   return (
-    <div className="MovieGrid">
+    <div className="movieGrid">
       {filteredMovies.map((movie) => (
         <button
           className="inner"

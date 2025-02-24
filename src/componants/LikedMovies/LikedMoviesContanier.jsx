@@ -11,7 +11,7 @@ import "../../css/likedMoviePage.css";
 export default function LikedMoviesContaner() {
   return (
     <>
-      <div className="liked-movies-page">
+      <div className="likedMoviesPage">
         <Header />
         <LikedMoviesList />
       </div>
